@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | Obed Nyangena</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary-color: #1d3557;
+      --secondary-color: #0f1e33;
+      --accent-color: #aadfff;
+      --text-color: #1a1a1a;
+      --bg-light: #f9f9f9;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #ffffff;
+      color: var(--text-color);
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: var(--secondary-color);
+      color: white;
+      padding: 1.2rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.6rem;
+      font-weight: 800;
+    }
+
+    nav a {
+      color: white;
+      margin-left: 1.2rem;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: var(--accent-color);
+    }
+
+    .about-section {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      padding: 4rem 2rem;
+      gap: 3rem;
+      background-color: var(--bg-light);
+    }
+
+    .about-image {
+      flex: 1 1 280px;
+      max-width: 320px;
+    }
+
+    .about-image img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .about-text {
+      flex: 2 1 400px;
+      max-width: 650px;
+    }
+
+    .about-text h2 {
+      font-size: 2rem;
+      color: var(--primary-color);
+      margin-bottom: 1rem;
+    }
+
+    .about-text p {
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+    }
+
+    footer {
+      background-color: var(--secondary-color);
+      color: white;
+      padding: 2.5rem 1rem;
+      text-align: center;
+    }
+
+    footer h2 {
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+      color: var(--accent-color);
+    }
+
+    footer p {
+      margin: 0.5rem 0;
+    }
+
+    footer a {
+      color: var(--accent-color);
+      text-decoration: none;
+      transition: text-decoration 0.3s ease;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 1.4rem;
+      }
+      nav a {
+        margin-left: 1rem;
+        font-size: 0.95rem;
+      }
+      .about-text h2 {
+        font-size: 1.6rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Obed Nyangena</h1>
+    <nav>
+      <a href="home.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="toolset.html">Toolset</a>
+      <a href="projects.html">Projects</a>
+      <a href="publications.html">Publications</a>
+      <a href="letters.html">Letters</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="about-section">
+    <div class="about-image">
+      <img src="images/Icon/obedimage.png" alt="Portrait of Obed Nyangena">
+    </div>
+    <div class="about-text">
+      <h2>About Me</h2>
+      <p>
+        I’m Obed Nyangena — a data analyst and policy consultant passionate about uncovering insights that drive real-world decisions.
+        With a background in economics and statistics, I specialize in visual storytelling, data modeling, and evidence-based analysis
+        to guide strategic initiatives for governments, nonprofits, and mission-driven organizations.
+      </p>
+      <p>
+        When I’m not exploring datasets or building dashboards, I’m thinking about how data can make life simpler, more equitable, and
+        more effective — one project at a time.
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    <div style="max-width: 600px; margin: auto;">
+      <h2>Contact Me</h2>
+      <p>Email: <a href="mailto:obednyangena@outlook.com">obednyangena@outlook.com</a></p>
+      <p>Phone: <a href="tel:+254700349788">+254 700349788</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/obednyangena-economist">obednyangena-economist</a></p>
+    </div>
+  </footer>
+</body>
+</html>
