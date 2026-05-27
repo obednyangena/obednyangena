@@ -30,7 +30,7 @@
       /* Text */
       --text-primary:   #ccd9ef;
       --text-secondary: #8aaacf;
-      --text-muted:     #5577a0;
+      --text-muted:      #5577a0;
       --text-bright:    #e8f0fb;
 
       /* Accent glow */
@@ -55,7 +55,7 @@
       overflow-x: hidden;
     }
 
-    /* ── Background mesh ── */
+    /* Background mesh */
     body::before {
       content: '';
       position: fixed;
@@ -68,7 +68,7 @@
       z-index: 0;
     }
 
-    /* ── HEADER ── */
+    /* HEADER */
     header {
       position: sticky;
       top: 0;
@@ -123,7 +123,7 @@
       color: #fff;
     }
 
-    /* ── HERO ── */
+    /* HERO */
     .hero {
       position: relative;
       z-index: 1;
@@ -308,7 +308,7 @@
       background: var(--bg-card2);
     }
 
-    /* ── STATS STRIP ── */
+    /* STATS STRIP */
     .stats-strip {
       position: relative; z-index: 1;
       max-width: 900px;
@@ -353,7 +353,7 @@
       text-transform: uppercase;
     }
 
-    /* ── SKILLS SECTION ── */
+    /* SKILLS SECTION */
     .section {
       position: relative; z-index: 1;
       max-width: 1000px;
@@ -451,7 +451,7 @@
       color: var(--text-primary);
     }
 
-    /* ── CONTACT CARD ── */
+    /* CONTACT CARD */
     .contact-card {
       position: relative; z-index: 1;
       max-width: 780px;
@@ -533,7 +533,7 @@
       color: var(--text-bright);
     }
 
-    /* ── FOOTER ── */
+    /* FOOTER */
     footer {
       background: var(--bg-deepest);
       border-top: 1px solid rgba(58,143,232,0.1);
@@ -550,7 +550,7 @@
     }
     footer a:hover { color: var(--accent-blue); }
 
-    /* ── MOBILE MENU TOGGLE ── */
+    /* MOBILE MENU TOGGLE */
     .menu-toggle {
       display: none;
       flex-direction: column;
@@ -568,7 +568,7 @@
       transition: all var(--transition);
     }
 
-    /* ── RESPONSIVE ── */
+    /* RESPONSIVE */
     @media (max-width: 700px) {
       header { padding: 0 1.2rem; }
       .menu-toggle { display: flex; }
@@ -592,14 +592,13 @@
       .contact-inner { padding: 2rem 1.5rem; }
     }
 
-    /* ── TAB PANEL HIDE ── */
+    /* TAB PANEL HIDE */
     .tab-panel { display: none; }
     .tab-panel.active { display: grid; }
   </style>
 </head>
 <body>
 
-  <!-- HEADER -->
   <header>
     <a class="logo" href="home.html">Obed <span>Nyangena</span></a>
 
@@ -618,7 +617,6 @@
     </nav>
   </header>
 
-  <!-- HERO -->
   <section class="hero">
     <div class="avatar-col">
       <div class="avatar-frame">
@@ -655,7 +653,6 @@
     </div>
   </section>
 
-  <!-- STATS -->
   <div class="stats-strip">
     <div class="stat-card">
       <div class="stat-number" data-target="40">0</div>
@@ -675,7 +672,6 @@
     </div>
   </div>
 
-  <!-- SKILLS -->
   <div class="section">
     <div class="section-label">
       <h2>Skills &amp; Toolset</h2>
@@ -716,7 +712,6 @@
     </div>
   </div>
 
-  <!-- CONTACT -->
   <div class="contact-card" id="contact">
     <div class="contact-inner">
       <div class="contact-text">
@@ -737,7 +732,6 @@
     </div>
   </div>
 
-  <!-- FOOTER -->
   <footer>
     © 2025 Obed Nyangena · <a href="mailto:obednyangena@outlook.com">obednyangena@outlook.com</a>
   </footer>
@@ -751,7 +745,7 @@
     function switchTab(e, key) {
       document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
       document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
-      e.target.classList.add('active');
+      e.currentTarget.classList.add('active');
       document.getElementById(tabMap[key]).classList.add('active');
     }
 
