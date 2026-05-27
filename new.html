@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Obed Nyangena — Economist, Data Analyst & Policy Consultant based in Kenya." />
+  <title>Obed Nyangena | Economist & Policy Consultant</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;0,9..144,700;1,9..144,300;1,9..144,600&family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* ===== TOKENS ===== */
+    :root {
+      --navy:      #083b66;
+      --navy-deep: #041f38;
+      --sky:       #d7ecff;
+      --sky-mid:   #a8d4f5;
+      --white:     #ffffff;
+      --amber:     #e8921a;
+      --amber-lt:  #fdf0dd;
+      --text:      #1a2d3f;
+      --muted:     #5a7a95;
+      --border:    rgba(8,59,102,0.15);
+      --card-shadow: 4px 4px 0 var(--navy);
+      --card-shadow-hover: 7px 7px 0 var(--navy);
+      --radius:    12px;
+      --ff-display: 'Fraunces', Georgia, serif;
+      --ff-body:    'Sora', system-ui, sans-serif;
+      --transition: 0.28s cubic-bezier(0.4,0,0.2,1);
+    }
+
+    /* ===== RESET ===== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body {
+      font-family: var(--ff-body);
+      background: var(--sky);
+      color: var(--text);
+      line-height: 1.65;
+      overflow-x: hidden;
+    }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+
+    /* ===== UTILITY ===== */
+    .container { max-width: 1160px; margin: 0 auto; padding: 0 1.5rem; }
+    .section { padding: 5rem 0; }
+    .section-label {
+      font-family: var(--ff-body);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--amber);
+      margin-bottom: 0.6rem;
+    }
+    .section-title {
+      font-family: var(--ff-display);
+      font-size: clamp(1.9rem, 4vw, 2.8rem);
+      font-weight: 700;
+      color: var(--navy);
+      line-height: 1.2;
+      margin-bottom: 1.2rem;
+    }
+    .section-intro {
+      font-size: 1.05rem;
+      color: var(--muted);
+      max-width: 600px;
+      line-height: 1.75;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1.6rem;
+      border-radius: 6px;
+      font-family: var(--ff-body);
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      border: 2px solid transparent;
+      transition: var(--transition);
+    }
+    .btn-primary {
+      background: var(--navy);
+      color: var(--white);
+      border-color: var(--navy);
+    }
+    .btn-primary:hover { background: var(--navy-deep); box-shadow: var(--card-shadow); transform: translate(-2px,-2px); }
+    .btn-outline {
+      background: transparent;
+      color: var(--navy);
+      border-color: var(--navy);
+    }
+    .btn-outline:hover { background: var(--navy); color: var(--white); transform: translate(-2px,-2px); box-shadow: var(--card-shadow); }
+    .btn-amber {
+      background: var(--amber);
+      color: var(--white);
+      border-color: var(--amber);
+    }
+    .btn-amber:hover { background: #c97810; box-shadow: 4px 4px 0 var(--navy-deep); transform: translate(-2px,-2px); }
+
+    /* ===== NAV ===== */
+    #main-nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 900;
+      background: var(--navy);
+      padding: 0.9rem 0;
+      box-shadow: 0 2px 16px rgba(4,31,56,0.25);
+      transition: background var(--transition);
+    }
+    #main-nav .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+    .nav-brand {
+      font-family: var(--ff-display);
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--white);
+      white-space: nowrap;
+      letter-spacing: -0.01em;
+    }
+    .nav-brand span { color: var(--sky-mid); }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 0.2rem;
+      list-style: none;
+    }
+    .nav-links a {
+      color: rgba(255,255,255,0.8);
+      font-size: 0.82rem;
+      font-weight: 500;
+      padding: 0.4rem 0.75rem;
+      border-radius: 4px;
+      transition: var(--transition);
+      letter-spacing: 0.02em;
+    }
+    .nav-links a:hover, .nav-links a.active { color: var(--white); background: rgba(255,255,255,0.12); }
+    .lang-switch {
+      display: flex;
+      gap: 0.25rem;
+      align-items: center;
+    }
+    .lang-btn {
+      background: transparent;
+      border: 1px solid rgba(255,255,255,0.3);
+      color: rgba(255,255,255,0.7);
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      padding: 0.28rem 0.55rem;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: var(--transition);
+      font-family: var(--ff-body);
+    }
+    .lang-btn.active, .lang-btn:hover { background: var(--amber); border-color: var(--amber); color: var(--white); }
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 6px;
+      background: none;
+      border: none;
+    }
+    .hamburger span { display: block; width: 22px; height: 2px; background: var(--white); border-radius: 2px; transition: var(--transition); }
+
+    /* ===== HERO ===== */
+    #home {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding-top: 5rem;
+      background: linear-gradient(145deg, var(--navy-deep) 0%, var(--navy) 55%, #0d5a9a 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    #home::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 70% 50%, rgba(215,236,255,0.08) 0%, transparent 60%),
+                  radial-gradient(ellipse at 10% 80%, rgba(232,146,26,0.07) 0%, transparent 50%);
+      pointer-events: none;
+    }
+    .hero-inner {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 4rem;
+      width: 100%;
+      position: relative;
+      z-index: 1;
+    }
+    .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(232,146,26,0.18);
+      border: 1px solid rgba(232,146,26,0.35);
+      color: #f0b55a;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 0.35rem 0.85rem;
+      border-radius: 50px;
+      margin-bottom: 1.5rem;
+      animation: fadeUp 0.6s ease both;
+    }
+    .hero-tag::before { content: '●'; font-size: 0.5rem; }
+    .hero-headline {
+      font-family: var(--ff-display);
+      font-size: clamp(2.4rem, 5.5vw, 4.2rem);
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.12;
+      margin-bottom: 1.4rem;
+      animation: fadeUp 0.6s 0.1s ease both;
+    }
+    .hero-headline em { color: var(--sky-mid); font-style: italic; }
+    .hero-sub {
+      font-size: 1.1rem;
+      color: rgba(215,236,255,0.75);
+      max-width: 520px;
+      line-height: 1.75;
+      margin-bottom: 2.2rem;
+      animation: fadeUp 0.6s 0.2s ease both;
+    }
+    .hero-actions {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      animation: fadeUp 0.6s 0.3s ease both;
+    }
+    .hero-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 2.5rem;
+      animation: fadeUp 0.6s 0.4s ease both;
+    }
+    .hero-pill {
+      background: rgba(215,236,255,0.1);
+      border: 1px solid rgba(215,236,255,0.2);
+      color: rgba(215,236,255,0.8);
+      font-size: 0.78rem;
+      padding: 0.3rem 0.75rem;
+      border-radius: 50px;
+      font-weight: 500;
+    }
+    .hero-stats {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      animation: fadeUp 0.6s 0.2s ease both;
+    }
+    .hero-stat-card {
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(215,236,255,0.18);
+      border-radius: 14px;
+      padding: 1.4rem 1.8rem;
+      text-align: center;
+      backdrop-filter: blur(4px);
+      min-width: 160px;
+    }
+    .hero-stat-num {
+      font-family: var(--ff-display);
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1;
+      display: block;
+    }
+    .hero-stat-num span { color: var(--amber); }
+    .hero-stat-label {
+      font-size: 0.75rem;
+      color: rgba(215,236,255,0.65);
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      margin-top: 0.4rem;
+      display: block;
+    }
+
+    /* ===== ABOUT ===== */
+    #about { background: var(--white); }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.6fr;
+      gap: 4rem;
+      align-items: start;
+    }
+    .about-photo-wrap { position: relative; }
+    .about-photo-placeholder {
+      width: 100%;
+      aspect-ratio: 3/4;
+      border-radius: var(--radius);
+      box-shadow: var(--card-shadow);
+      background: linear-gradient(135deg, var(--sky) 0%, var(--sky-mid) 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: var(--navy);
+    }
+    .about-photo-placeholder svg { width: 80px; height: 80px; opacity: 0.4; }
+    .about-photo-placeholder p { font-size: 0.8rem; opacity: 0.5; margin-top: 0.5rem; }
+    .about-badge {
+      position: absolute;
+      bottom: 1.5rem;
+      right: -1rem;
+      background: var(--amber);
+      color: var(--white);
+      border-radius: 10px;
+      padding: 0.7rem 1rem;
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-align: center;
+      box-shadow: 3px 3px 0 var(--navy-deep);
+      line-height: 1.4;
+    }
+    .about-body p { color: var(--text); font-size: 1rem; line-height: 1.8; margin-bottom: 1rem; }
+    .about-highlights {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-top: 1.8rem;
+    }
+    .highlight-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      padding: 0.9rem 1rem;
+      background: var(--sky);
+      border-radius: 8px;
+      border-left: 3px solid var(--amber);
+    }
+    .highlight-icon { font-size: 1.2rem; flex-shrink: 0; }
+    .highlight-text { font-size: 0.85rem; color: var(--navy); font-weight: 500; line-height: 1.5; }
+
+    /* ===== ANIMATIONS ===== */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: none; }
+    }
+    .fade-up {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .fade-up.visible { opacity: 1; transform: none; }
+
+    /* ===== MOBILE ===== */
+    .mobile-menu {
+      display: none;
+      position: fixed; inset: 0; z-index: 800;
+      background: var(--navy-deep);
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      padding: 2rem;
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a {
+      color: var(--white);
+      font-size: 1.4rem;
+      font-family: var(--ff-display);
+      font-weight: 600;
+      text-align: center;
+      transition: var(--transition);
+    }
+    .mobile-menu a:hover { color: var(--amber); }
+    .mobile-close {
+      position: absolute;
+      top: 1.5rem; right: 1.5rem;
+      background: none;
+      border: none;
+      color: var(--white);
+      font-size: 1.8rem;
+      cursor: pointer;
+    }
+    .mobile-menu .mobile-langs {
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    @media (max-width: 900px) {
+      .nav-links, .lang-switch { display: none; }
+      .hamburger { display: flex; }
+      .hero-inner { grid-template-columns: 1fr; }
+      .hero-stats { flex-direction: row; justify-content: center; }
+      .about-grid { grid-template-columns: 1fr; }
+      .about-photo-placeholder { max-width: 320px; margin: 0 auto; }
+    }
+    @media (max-width: 600px) {
+      .hero-stats { flex-direction: column; align-items: center; }
+      .about-highlights { grid-template-columns: 1fr; }
+      .hero-headline { font-size: 2.1rem; }
+    }
+  </style>
+</head>
+<body>
+
+<nav id="main-nav">
+  <div class="container nav-inner">
+    <a href="#home" class="nav-brand">Obed <span>Nyangena</span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home" data-i18n="nav.home">Home</a></li>
+      <li><a href="#about" data-i18n="nav.about">About</a></li>
+      <li><a href="#toolset" data-i18n="nav.toolset">Toolset</a></li>
+      <li><a href="#research" data-i18n="nav.research">Research</a></li>
+      <li><a href="#publications" data-i18n="nav.publications">Publications</a></li>
+      <li><a href="#voice" data-i18n="nav.voice">Voice</a></li>
+      <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+    </ul>
+    <div class="lang-switch">
+      <button class="lang-btn active" onclick="setLang('en')">EN</button>
+      <button class="lang-btn" onclick="setLang('fr')">FR</button>
+      <button class="lang-btn" onclick="setLang('sw')">SW</button>
+    </div>
+    <button class="hamburger" onclick="toggleMobile()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" onclick="toggleMobile()">✕</button>
+  <a href="#home" onclick="toggleMobile()" data-i18n="nav.home">Home</a>
+  <a href="#about" onclick="toggleMobile()" data-i18n="nav.about">About</a>
+  <a href="#toolset" onclick="toggleMobile()" data-i18n="nav.toolset">Toolset</a>
+  <a href="#research" onclick="toggleMobile()" data-i18n="nav.research">Research</a>
+  <a href="#publications" onclick="toggleMobile()" data-i18n="nav.publications">Publications</a>
+  <a href="#voice" onclick="toggleMobile()" data-i18n="nav.voice">Voice</a>
+  <a href="#contact" onclick="toggleMobile()" data-i18n="nav.contact">Contact</a>
+  <div class="mobile-langs">
+    <button class="lang-btn" onclick="setLang('en');toggleMobile()">EN</button>
+    <button class="lang-btn" onclick="setLang('fr');toggleMobile()">FR</button>
+    <button class="lang-btn" onclick="setLang('sw');toggleMobile()">SW</button>
+  </div>
+</div>
+
+<section id="home">
+  <div class="container">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <div class="hero-tag" data-i18n="hero.tag">Available for Consulting & Collaboration</div>
+        <h1 class="hero-headline" data-i18n-html="hero.headline">
+          In an economy shaped by data,<br><em>I uncover the patterns that matter.</em>
+        </h1>
+        <p class="hero-sub" data-i18n="hero.sub">
+          Economist · Data Analyst · Policy Consultant · Visual Storyteller — 12+ years delivering evidence-based insights for governments, international development partners and mission-driven organizations across Africa.
+        </p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-primary">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+            <span data-i18n="hero.cta_contact">Work With Me</span>
+          </a>
+        </div>
+        <div class="hero-pills">
+          <span class="hero-pill">🌍 Nairobi, Kenya</span>
+          <span class="hero-pill">📊 World Bank · USAID · EU</span>
+          <span class="hero-pill">🎓 MA Economics, UoN</span>
+          <span class="hero-pill">🔬 8 Scholarly Publications</span>
+        </div>
+      </div>
+
+      <div class="hero-stats">
+        <div class="hero-stat-card">
+          <span class="hero-stat-num">12<span>+</span></span>
+          <span class="hero-stat-label" data-i18n="stat.years">Years Experience</span>
+        </div>
+        <div class="hero-stat-card">
+          <span class="hero-stat-num">8<span>+</span></span>
+          <span class="hero-stat-label" data-i18n="stat.pubs">Publications</span>
+        </div>
+        <div class="hero-stat-card">
+          <span class="hero-stat-num">100<span>+</span></span>
+          <span class="hero-stat-label" data-i18n="stat.citations">Citations</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="section">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-photo-wrap fade-up">
+        <div class="about-photo-placeholder">
+          <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="32" cy="22" r="12" stroke="#083b66" stroke-width="2"/>
+            <path d="M8 56c0-13.255 10.745-24 24-24s24 10.745 24 24" stroke="#083b66" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          <p>Obed Nyangena</p>
+        </div>
+        <div class="about-badge">
+          Principal Researcher<br>National Mining Corp.<br>Kenya
+        </div>
+      </div>
+
+      <div class="about-body fade-up">
+        <p class="section-label" data-i18n="about.label">Who I Am</p>
+        <h2 class="section-title" data-i18n="about.title">Bridging Data, Policy & Real-World Impact</h2>
+        <p data-i18n="about.p1">
+          I'm Obed Nyangena — an economist and policy consultant with over 12 years of experience designing data-driven solutions across climate adaptation, food security, health, sustainable development, digitalization, and national security.
+        </p>
+        <p data-i18n="about.p2">
+          I currently lead Research, Strategy and Planning at the National Mining Corporation, where I spearheaded Kenya's first green minerals strategic plan — positioning the country as a critical minerals hub for the global energy transition, aligned with the Paris Agreement and UN SDGs.
+        </p>
+        <p data-i18n="about.p3">
+          My track record spans international policy advisory with the World Bank, USAID, IOM, and the EU — and I bring rigorous econometric methods together with sharp policy instincts to every engagement. When I'm not in the data, I'm writing op-eds and contributing to national policy conversations.
+        </p>
+        <div class="about-highlights">
+          <div class="highlight-item">
+            <span class="highlight-icon">🏛️</span>
+            <span class="highlight-text">COVID-19 Presidential Taskforce — 2020 Executive Order</span>
+          </div>
+          <div class="highlight-item">
+            <span class="highlight-icon">💎</span>
+            <span class="highlight-text">Kenya Green Minerals Strategic Plan — 2024</span>
+          </div>
+          <div class="highlight-item">
+            <span class="highlight-icon">🌍</span>
+            <span class="highlight-text">World Bank Somalia Capacity Building</span>
+          </div>
+          <div class="highlight-item">
+            <span class="highlight-icon">🔒</span>
+            <span class="highlight-text">US State Dept. Project Revelio — 2023</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  // 1. Mobile Menu Toggle
+  function toggleMobile() {
+    const menu = document.getElementById('mobileMenu');
+    menu.classList.toggle('open');
+  }
+
+  // 2. Light Translation Engine Data
+  const translations = {
+    en: {
+      "nav.home": "Home", "nav.about": "About", "nav.toolset": "Toolset", "nav.research": "Research",
+      "nav.publications": "Publications", "nav.voice": "Voice", "nav.contact": "Contact",
+      "hero.tag": "Available for Consulting & Collaboration",
+      "hero.headline": "In an economy shaped by data,<br><em>I uncover the patterns that matter.</em>",
+      "hero.sub": "Economist · Data Analyst · Policy Consultant · Visual Storyteller — 12+ years delivering evidence-based insights for governments, international development partners and mission-driven organizations across Africa.",
+      "hero.cta_contact": "Work With Me", "stat.years": "Years Experience", "stat.pubs": "Publications",
+      "stat.citations": "Citations", "about.label": "Who I Am", "about.title": "Bridging Data, Policy & Real-World Impact",
+      "about.p1": "I'm Obed Nyangena — an economist and policy consultant with over 12 years of experience designing data-driven solutions...",
+      "about.p2": "I currently lead Research, Strategy and Planning at the National Mining Corporation...",
+      "about.p3": "My track record spans international policy advisory with the World Bank, USAID, IOM, and the EU..."
+    },
+    fr: {
+      "nav.home": "Accueil", "nav.about": "À Propos", "nav.toolset": "Outils", "nav.research": "Recherche",
+      "nav.publications": "Publications", "nav.voice": "Média", "nav.contact": "Contact",
+      "hero.tag": "Disponible pour Consultation et Collaboration",
+      "hero.headline": "Dans une économie façonnée par les données,<br><em>je révèle les modèles essentiels.</em>",
+      "hero.sub": "Économiste · Analyste de Données · Consultant en Politiques — Plus de 12 ans d'expérience auprès des gouvernements.",
+      "hero.cta_contact": "Collaborer avec moi", "stat.years": "Ans d'Expérience", "stat.pubs": "Publications",
+      "stat.citations": "Citations", "about.label": "Qui Je Suis", "about.title": "Relier Données, Politiques et Impact Réel",
+      "about.p1": "Je suis Obed Nyangena — économiste et consultant en politiques publiques avec plus de 12 ans d'expérience...",
+      "about.p2": "Je dirige actuellement la recherche et la planification à la National Mining Corporation...",
+      "about.p3": "Mon parcours comprend des conseils stratégiques internationaux avec la Banque Mondiale, l'USAID..."
+    },
+    sw: {
+      "nav.home": "Nyumbani", "nav.about": "Kuhusu", "nav.toolset": "Zana", "nav.research": "Utafiti",
+      "nav.publications": "Machapisho", "nav.voice": "Sauti", "nav.contact": "Wasiliana",
+      "hero.tag": "Anapatikana kwa Ushauri na Ushirikiano",
+      "hero.headline": "Katika uchumi unaoongozwa na data,<br><em>mimi hugundua mwelekeo muhimu.</em>",
+      "hero.sub": "Mwanauchumi · Mchambuzi wa Data · Mshauri wa Sera — Miaka 12+ ya kutoa maarifa kwa serikali na mashirika ya kimataifa.",
+      "hero.cta_contact": "Fanya Kazi Nami", "stat.years": "Miaka ya Uzoefu", "stat.pubs": "Machapisho",
+      "stat.citations": "Nukuu", "about.label": "Mimi ni Nani", "about.title": "Kuunganisha Data, Sera na Matokeo Halisi",
+      "about.p1": "Mimi ni Obed Nyangena — mwanauchumi na mshauri wa sera mwenye uzoefu wa zaidi ya miaka 12...",
+      "about.p2": "Kwa sasa ninaongoza Utafiti, Mkakati na Mipango katika Shirika la Kitaifa la Madini (NMC)...",
+      "about.p3": "Historia ya kazi yangu inajumuisha ushauri wa sera za kimataifa na Benki ya Dunia, USAID, IOM, na EU..."
+    }
+  };
+
+  // 3. Language Switching Engine Function
+  function setLang(lang) {
+    // Update active UI classes on language switch buttons
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      if(btn.textContent.trim().toLowerCase() === lang) btn.classList.add('active');
+      else btn.classList.remove('active');
+    });
+
+    // Translate attributes
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.getAttribute('data-i18n');
+      if (translations[lang] && translations[lang][key]) {
+        el.textContent = translations[lang][key];
+      }
+    });
+
+    // Translate HTML formatted targets
+    document.querySelectorAll('[data-i18n-html]').forEach(el => {
+      const key = el.getAttribute('data-i18n-html');
+      if (translations[lang] && translations[lang][key]) {
+        el.innerHTML = translations[lang][key];
+      }
+    });
+
+    document.documentElement.lang = lang;
+  }
+
+  // 4. Basic Animation Trigger on Scroll
+  document.addEventListener("DOMContentLoaded", () => {
+    const fadeElements = document.querySelectorAll('.fade-up');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    fadeElements.forEach(el => observer.observe(el));
+  });
+</script>
+
+</body>
+</html>
