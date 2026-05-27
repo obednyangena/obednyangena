@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Obed Nyangena — Economist, Data Analyst & Policy Consultant based in Kenya. 12+ years delivering data-driven insights for governments, NGOs and international development partners." />
+  <meta name="description" content="Obed Nyangena — Economist, Data Analyst & Policy Consultant based in Kenya." />
   <title>Obed Nyangena | Economist & Policy Consultant</title>
 
   <!-- Fonts: Fraunces (editorial serif) + Sora (clean geometric sans) -->
@@ -189,17 +189,6 @@
                   radial-gradient(ellipse at 10% 80%, rgba(232,146,26,0.07) 0%, transparent 50%);
       pointer-events: none;
     }
-    /* Grid lines decoration */
-    #home::after {
-      content: '';
-      position: absolute;
-      right: 0; top: 0; bottom: 0;
-      width: 45%;
-      background-image: linear-gradient(rgba(215,236,255,0.04) 1px, transparent 1px),
-                        linear-gradient(90deg, rgba(215,236,255,0.04) 1px, transparent 1px);
-      background-size: 40px 40px;
-      pointer-events: none;
-    }
     .hero-inner {
       display: grid;
       grid-template-columns: 1fr auto;
@@ -307,17 +296,7 @@
       gap: 4rem;
       align-items: start;
     }
-    .about-photo-wrap {
-      position: relative;
-    }
-    .about-photo {
-      width: 100%;
-      aspect-ratio: 3/4;
-      object-fit: cover;
-      border-radius: var(--radius);
-      box-shadow: var(--card-shadow);
-      background: var(--sky);
-    }
+    .about-photo-wrap { position: relative; }
     .about-photo-placeholder {
       width: 100%;
       aspect-ratio: 3/4;
@@ -391,11 +370,6 @@
       font-weight: 500;
       letter-spacing: 0.03em;
     }
-    .impact-divider {
-      width: 1px;
-      background: rgba(255,255,255,0.1);
-      align-self: stretch;
-    }
 
     /* ===== TOOLSET ===== */
     #toolset { background: var(--sky); }
@@ -424,7 +398,7 @@
       object-fit: contain;
       margin: 0 auto 0.75rem;
     }
-    .tool-card .tool-name {
+    .tool-name {
       font-size: 0.82rem;
       font-weight: 600;
       color: var(--navy);
@@ -465,7 +439,6 @@
     .tab-panel { display: none; }
     .tab-panel.active { display: block; }
 
-    /* ── Article-card grid (matches original projects.html style) ── */
     .articles-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -500,7 +473,6 @@
       transform: translateY(-6px);
       box-shadow: var(--card-shadow-hover);
     }
-    /* Cover image area */
     .article-cover {
       width: 100%;
       height: 180px;
@@ -527,14 +499,12 @@
       color: var(--navy);
       margin-bottom: 0.2rem;
       line-height: 1.4;
-      flex-shrink: 0;
     }
     .article-client {
       font-size: 0.78rem;
       color: var(--muted);
       font-style: italic;
       margin-bottom: 0.75rem;
-      flex-shrink: 0;
     }
     .article-badge {
       display: inline-flex;
@@ -560,7 +530,6 @@
       border-radius: 50px;
       font-weight: 500;
     }
-    /* Strategic contributions */
     .contrib-list { display: flex; flex-direction: column; gap: 1rem; }
     .contrib-item {
       display: flex;
@@ -623,7 +592,7 @@
     .pub-year-badge { font-size: 0.7rem; font-weight: 700; background: var(--navy); color: var(--white); padding: 0.15rem 0.5rem; border-radius: 4px; }
     .pub-cite-badge { font-size: 0.7rem; font-weight: 700; color: var(--amber); background: var(--amber-lt); border: 1px solid var(--amber); padding: 0.15rem 0.5rem; border-radius: 4px; }
 
-    /* ===== VOICE / OP-EDS ===== */
+    /* ===== VOICE ===== */
     #voice { background: var(--white); }
     .voice-grid {
       display: grid;
@@ -702,7 +671,6 @@
       flex-shrink: 0;
     }
     .channel-info small { display: block; font-size: 0.72rem; color: rgba(215,236,255,0.5); margin-top: 0.1rem; }
-    .contact-form-wrap { }
     .contact-form { display: flex; flex-direction: column; gap: 1rem; }
     .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
     .form-group { display: flex; flex-direction: column; gap: 0.4rem; }
@@ -789,7 +757,7 @@
     }
     .fade-up.visible { opacity: 1; transform: none; }
 
-    /* ===== MOBILE NAV OVERLAY ===== */
+    /* ===== MOBILE ===== */
     .mobile-menu {
       display: none;
       position: fixed; inset: 0; z-index: 800;
@@ -824,16 +792,14 @@
       gap: 0.5rem;
     }
 
-    /* ===== RESPONSIVE ===== */
     @media (max-width: 900px) {
       .nav-links, .lang-switch { display: none; }
       .hamburger { display: flex; }
       .hero-inner { grid-template-columns: 1fr; }
       .hero-stats { flex-direction: row; justify-content: center; }
       .about-grid { grid-template-columns: 1fr; }
-      .about-photo-placeholder, .about-photo { max-width: 320px; margin: 0 auto; }
+      .about-photo-placeholder { max-width: 320px; margin: 0 auto; }
       .impact-grid { grid-template-columns: repeat(2,1fr); }
-      .impact-divider { display: none; }
       .contact-grid { grid-template-columns: 1fr; }
       .form-row { grid-template-columns: 1fr; }
     }
@@ -905,10 +871,6 @@
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
             <span data-i18n="hero.cta_contact">Work With Me</span>
           </a>
-          <a href="2026_Obed_Nyangena_CV.docx" download class="btn btn-outline" style="color:var(--sky);border-color:var(--sky-mid);">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-            <span data-i18n="hero.cta_cv">Download CV</span>
-          </a>
         </div>
         <div class="hero-pills">
           <span class="hero-pill">🌍 Nairobi, Kenya</span>
@@ -941,13 +903,12 @@
   <div class="container">
     <div class="about-grid">
       <div class="about-photo-wrap fade-up">
-        <!-- Replace src with your actual photo path e.g. images/obedimage.png -->
         <div class="about-photo-placeholder">
           <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="32" cy="22" r="12" stroke="#083b66" stroke-width="2"/>
             <path d="M8 56c0-13.255 10.745-24 24-24s24 10.745 24 24" stroke="#083b66" stroke-width="2" stroke-linecap="round"/>
           </svg>
-          <p>Place photo here</p>
+          <p>Obed Nyangena</p>
         </div>
         <div class="about-badge">
           Principal Researcher<br>National Mining Corp.<br>Kenya
@@ -993,10 +954,6 @@
             <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2z"/></svg>
             ORCID
           </a>
-          <a href="2026_Obed_Nyangena_CV.docx" download class="btn btn-amber">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-            <span data-i18n="hero.cta_cv">Download CV</span>
-          </a>
         </div>
       </div>
     </div>
@@ -1033,384 +990,53 @@
     <p class="section-label fade-up" data-i18n="toolset.label">Technical Stack</p>
     <h2 class="section-title fade-up" data-i18n="toolset.title">Tools I Work With</h2>
     <p class="section-intro fade-up" data-i18n="toolset.intro">A versatile toolkit spanning statistical analysis, data visualization, econometrics, and AI-augmented research workflows.</p>
-
     <div class="tools-grid">
-      <!-- Stats & Econometrics -->
-      <div class="tool-card">
-        <img src="https://cdn.simpleicons.org/r/276DC3" alt="R" onerror="this.style.display='none'">
-        <div class="tool-name">R / R-GUI</div>
-      </div>
-      <div class="tool-card">
-        <img src="https://cdn.simpleicons.org/python/3776AB" alt="Python" onerror="this.style.display='none'">
-        <div class="tool-name">Python</div>
-      </div>
-      <div class="tool-card">
-        <div class="tool-icon-svg" style="background:#1A5882;color:white;font-size:1rem;font-weight:700;font-family:Georgia,serif;">Stata</div>
-        <div class="tool-name">Stata</div>
-      </div>
-      <!-- BI & Viz -->
-      <div class="tool-card">
-        <img src="https://cdn.simpleicons.org/powerbi/F2C811" alt="Power BI" onerror="this.style.display='none'">
-        <div class="tool-name">Power BI</div>
-      </div>
-      <div class="tool-card">
-        <div class="tool-icon-svg" style="background:#E97627;color:white;font-size:0.75rem;font-weight:700;">Tableau</div>
-        <div class="tool-name">Tableau</div>
-      </div>
-      <div class="tool-card">
-        <div class="tool-icon-svg" style="background:#4285F4;color:white;font-size:0.7rem;font-weight:700;">Looker</div>
-        <div class="tool-name">Looker Studio</div>
-      </div>
-      <!-- Spreadsheets -->
-      <div class="tool-card">
-        <img src="https://cdn.simpleicons.org/microsoftexcel/217346" alt="Excel" onerror="this.style.display='none'">
-        <div class="tool-name">Excel</div>
-      </div>
-      <div class="tool-card">
-        <img src="https://cdn.simpleicons.org/googlesheets/34A853" alt="Google Sheets" onerror="this.style.display='none'">
-        <div class="tool-name">Google Sheets</div>
-      </div>
-      <!-- Data -->
-      <div class="tool-card">
-        <img src="https://cdn.simpleicons.org/sqlite/003B57" alt="SQL" onerror="this.style.display='none'">
-        <div class="tool-name">SQL</div>
-      </div>
-      <!-- Survey -->
-      <div class="tool-card">
-        <img src="https://cdn.simpleicons.org/googleforms/6C35D4" alt="Google Forms" onerror="this.style.display='none'">
-        <div class="tool-name">Google Forms</div>
-      </div>
-      <div class="tool-card">
-        <div class="tool-icon-svg" style="background:#0078D4;color:white;font-size:0.65rem;font-weight:700;">MS Forms</div>
-        <div class="tool-name">Microsoft Forms</div>
-      </div>
-      <!-- AI -->
-      <div class="tool-card">
-        <img src="https://cdn.simpleicons.org/perplexity/1FB8CD" alt="Perplexity AI" onerror="this.style.display='none'">
-        <div class="tool-name">Perplexity AI</div>
-      </div>
+      <div class="tool-card"><img src="https://cdn.simpleicons.org/r/276DC3" alt="R"><div class="tool-name">R / R-GUI</div></div>
+      <div class="tool-card"><img src="https://cdn.simpleicons.org/python/3776AB" alt="Python"><div class="tool-name">Python</div></div>
+      <div class="tool-card"><div class="tool-icon-svg" style="background:#1A5882;color:white;">Stata</div><div class="tool-name">Stata</div></div>
+      <div class="tool-card"><img src="https://cdn.simpleicons.org/powerbi/F2C811" alt="Power BI"><div class="tool-name">Power BI</div></div>
+      <div class="tool-card"><div class="tool-icon-svg" style="background:#E97627;color:white;">Tableau</div><div class="tool-name">Tableau</div></div>
+      <div class="tool-card"><div class="tool-icon-svg" style="background:#4285F4;color:white;">Looker</div><div class="tool-name">Looker Studio</div></div>
+      <div class="tool-card"><img src="https://cdn.simpleicons.org/microsoftexcel/217346" alt="Excel"><div class="tool-name">Excel</div></div>
+      <div class="tool-card"><img src="https://cdn.simpleicons.org/googlesheets/34A853" alt="Google Sheets"><div class="tool-name">Google Sheets</div></div>
+      <div class="tool-card"><img src="https://cdn.simpleicons.org/sqlite/003B57" alt="SQL"><div class="tool-name">SQL</div></div>
+      <div class="tool-card"><img src="https://cdn.simpleicons.org/googleforms/6C35D4" alt="Google Forms"><div class="tool-name">Google Forms</div></div>
+      <div class="tool-card"><div class="tool-icon-svg" style="background:#0078D4;color:white;">MS Forms</div><div class="tool-name">Microsoft Forms</div></div>
+      <div class="tool-card"><img src="https://cdn.simpleicons.org/perplexity/1FB8CD" alt="Perplexity AI"><div class="tool-name">Perplexity AI</div></div>
     </div>
   </div>
 </section>
 
-<!-- ===== RESEARCH ===== -->
+<!-- ===== RESEARCH & PROJECTS ===== -->
 <section id="research" class="section">
   <div class="container">
     <p class="section-label fade-up" data-i18n="research.label">Research & Projects</p>
     <h2 class="section-title fade-up" data-i18n="research.title">Selected Work</h2>
-
     <div class="tab-bar fade-up">
       <button class="tab-btn active" onclick="switchTab('projects')" data-i18n="tab.projects">Projects</button>
       <button class="tab-btn" onclick="switchTab('contributions')" data-i18n="tab.contributions">Strategic Contributions</button>
     </div>
 
-    <!-- Projects Tab -->
     <div class="tab-panel active" id="tab-projects">
       <div class="articles-grid" id="projectsGrid">
-
-        <!-- 1 · Green Minerals -->
-        <article class="article-card">
-          <div class="article-cover">
-            <svg viewBox="0 0 400 180" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
-              <defs>
-                <linearGradient id="g1a" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#041f38"/><stop offset="100%" stop-color="#0a5c2e"/></linearGradient>
-              </defs>
-              <rect width="400" height="180" fill="url(#g1a)"/>
-              <!-- hex grid background -->
-              <g opacity="0.15" stroke="#e8921a" stroke-width="1" fill="none">
-                <polygon points="60,30 80,20 100,30 100,50 80,60 60,50"/>
-                <polygon points="100,50 120,40 140,50 140,70 120,80 100,70"/>
-                <polygon points="20,70 40,60 60,70 60,90 40,100 20,90"/>
-                <polygon points="140,10 160,0 180,10 180,30 160,40 140,30"/>
-                <polygon points="300,50 320,40 340,50 340,70 320,80 300,70"/>
-                <polygon points="340,20 360,10 380,20 380,40 360,50 340,40"/>
-              </g>
-              <!-- crystal / gem icon -->
-              <g transform="translate(185,40)">
-                <polygon points="30,0 60,20 60,60 30,80 0,60 0,20" fill="none" stroke="#4ade80" stroke-width="2.5" opacity="0.9"/>
-                <polygon points="30,0 60,20 30,35" fill="rgba(74,222,128,0.2)"/>
-                <polygon points="30,35 60,20 60,60" fill="rgba(74,222,128,0.12)"/>
-                <polygon points="30,35 60,60 30,80" fill="rgba(74,222,128,0.18)"/>
-                <polygon points="30,35 30,80 0,60" fill="rgba(74,222,128,0.08)"/>
-                <polygon points="30,35 0,60 0,20" fill="rgba(74,222,128,0.15)"/>
-                <polygon points="30,35 0,20 30,0" fill="rgba(74,222,128,0.25)"/>
-              </g>
-              <text x="30" y="155" font-family="Georgia,serif" font-size="13" fill="rgba(255,255,255,0.4)" font-style="italic">Kenya · 2024</text>
-              <text x="370" y="155" font-family="Georgia,serif" font-size="13" fill="#4ade80" text-anchor="end" opacity="0.7">NMC</text>
-            </svg>
-          </div>
-          <div class="article-badge">★ Lead Researcher &amp; Strategist</div>
-          <h3 class="article-title">Kenya Green Minerals Strategic Plan</h3>
-          <p class="article-client">National Mining Corporation of Kenya · 2024</p>
-          <p class="article-desc">Led development of Kenya's first strategic plan for green minerals investment — aligning mining policies with the Paris Agreement and UN SDGs, positioning the country as a critical minerals hub for the global clean-energy transition.</p>
-          <div class="rc-tags"><span class="rc-tag">Green Economy</span><span class="rc-tag">Strategy</span><span class="rc-tag">UN SDGs</span><span class="rc-tag">Mining Policy</span></div>
-        </article>
-
-        <!-- 2 · Migration & Border Security -->
-        <article class="article-card">
-          <div class="article-cover">
-            <svg viewBox="0 0 400 180" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
-              <defs>
-                <linearGradient id="g2a" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#0f2d4a"/><stop offset="100%" stop-color="#1a4a7a"/></linearGradient>
-              </defs>
-              <rect width="400" height="180" fill="url(#g2a)"/>
-              <!-- map grid lines -->
-              <g stroke="rgba(168,212,245,0.1)" stroke-width="1">
-                <line x1="0" y1="45" x2="400" y2="45"/><line x1="0" y1="90" x2="400" y2="90"/><line x1="0" y1="135" x2="400" y2="135"/>
-                <line x1="80" y1="0" x2="80" y2="180"/><line x1="160" y1="0" x2="160" y2="180"/><line x1="240" y1="0" x2="240" y2="180"/><line x1="320" y1="0" x2="320" y2="180"/>
-              </g>
-              <!-- route arrows -->
-              <g stroke="#e8921a" stroke-width="2" fill="none" opacity="0.75">
-                <path d="M60,140 Q120,100 200,90" stroke-dasharray="6,3"/>
-                <path d="M200,90 Q280,80 340,60" stroke-dasharray="6,3"/>
-                <circle cx="60" cy="140" r="5" fill="#e8921a"/>
-                <circle cx="200" cy="90" r="5" fill="#e8921a"/>
-                <circle cx="340" cy="60" r="5" fill="#e8921a"/>
-                <polygon points="335,55 345,63 332,65" fill="#e8921a"/>
-              </g>
-              <!-- shield icon -->
-              <g transform="translate(165,20)">
-                <path d="M35,0 L70,12 L70,40 Q70,65 35,75 Q0,65 0,40 L0,12 Z" fill="none" stroke="rgba(168,212,245,0.5)" stroke-width="2"/>
-                <path d="M20,38 L30,48 L52,26" stroke="#a8d4f5" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-              </g>
-              <text x="30" y="168" font-family="Georgia,serif" font-size="13" fill="rgba(255,255,255,0.4)" font-style="italic">Kenya · 2023</text>
-              <text x="370" y="168" font-family="Georgia,serif" font-size="13" fill="#e8921a" text-anchor="end" opacity="0.8">IOM</text>
-            </svg>
-          </div>
-          <div class="article-badge">★ Researcher &amp; Trainer</div>
-          <h3 class="article-title">Migration and Regional Border Security</h3>
-          <p class="article-client">International Organization for Migration (IOM) · 2023</p>
-          <p class="article-desc">Conducted research on border security challenges at Kenya's ports of entry and exit. Synthesized data and developed a full training curriculum, PowerPoint slides, and manual for the Kenya School of Government.</p>
-          <div class="rc-tags"><span class="rc-tag">Security</span><span class="rc-tag">Migration</span><span class="rc-tag">KSG</span><span class="rc-tag">Training</span></div>
-        </article>
-
-        <!-- 3 · CVE / NIWETU -->
-        <article class="article-card">
-          <div class="article-cover">
-            <svg viewBox="0 0 400 180" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
-              <defs>
-                <linearGradient id="g3a" x1="0%" y1="100%" x2="100%" y2="0%"><stop offset="0%" stop-color="#2a0a0a"/><stop offset="100%" stop-color="#5a1a00"/></linearGradient>
-              </defs>
-              <rect width="400" height="180" fill="url(#g3a)"/>
-              <g opacity="0.12" fill="none" stroke="#e8921a" stroke-width="1">
-                <circle cx="200" cy="90" r="35"/><circle cx="200" cy="90" r="60"/><circle cx="200" cy="90" r="85"/>
-              </g>
-              <!-- radar sweep -->
-              <line x1="200" y1="90" x2="270" y2="30" stroke="rgba(232,146,26,0.4)" stroke-width="1.5"/>
-              <circle cx="200" cy="90" r="5" fill="#e8921a" opacity="0.8"/>
-              <!-- document icon -->
-              <g transform="translate(160,25)">
-                <rect x="0" y="0" width="50" height="65" rx="4" fill="none" stroke="rgba(232,146,26,0.5)" stroke-width="1.5"/>
-                <line x1="8" y1="18" x2="42" y2="18" stroke="rgba(232,146,26,0.4)" stroke-width="1.5"/>
-                <line x1="8" y1="28" x2="42" y2="28" stroke="rgba(232,146,26,0.4)" stroke-width="1.5"/>
-                <line x1="8" y1="38" x2="30" y2="38" stroke="rgba(232,146,26,0.4)" stroke-width="1.5"/>
-                <polygon points="35,0 50,0 50,15" fill="rgba(232,146,26,0.25)"/>
-              </g>
-              <text x="30" y="168" font-family="Georgia,serif" font-size="13" fill="rgba(255,255,255,0.35)" font-style="italic">Kenya · 2019</text>
-              <text x="370" y="168" font-family="Georgia,serif" font-size="13" fill="#fb923c" text-anchor="end" opacity="0.8">USAID</text>
-            </svg>
-          </div>
-          <div class="article-badge">★ Researcher &amp; Trainer</div>
-          <h3 class="article-title">Countering Violent Extremism — NIWETU</h3>
-          <p class="article-client">USAID / US Government · 2019</p>
-          <p class="article-desc">Undertook policy-gap analysis of Kenya's security laws. Developed training materials for the Kenya School of Government, organised validation workshops, and trained the target cohort of course participants.</p>
-          <div class="rc-tags"><span class="rc-tag">USAID</span><span class="rc-tag">CVE</span><span class="rc-tag">Policy Analysis</span><span class="rc-tag">Security</span></div>
-        </article>
-
-        <!-- 4 · World Bank Somalia -->
-        <article class="article-card">
-          <div class="article-cover">
-            <svg viewBox="0 0 400 180" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
-              <defs>
-                <linearGradient id="g4a" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#003366"/><stop offset="100%" stop-color="#005b9a"/></linearGradient>
-              </defs>
-              <rect width="400" height="180" fill="url(#g4a)"/>
-              <!-- globe lines -->
-              <g stroke="rgba(168,212,245,0.15)" stroke-width="1" fill="none">
-                <ellipse cx="200" cy="90" rx="75" ry="75"/>
-                <ellipse cx="200" cy="90" rx="40" ry="75"/>
-                <ellipse cx="200" cy="90" rx="75" ry="30"/>
-                <line x1="125" y1="90" x2="275" y2="90"/>
-              </g>
-              <!-- people icons -->
-              <g fill="rgba(168,212,245,0.55)">
-                <circle cx="150" cy="72" r="8"/><rect x="140" y="82" width="20" height="24" rx="3"/>
-                <circle cx="180" cy="72" r="8"/><rect x="170" y="82" width="20" height="24" rx="3"/>
-                <circle cx="210" cy="72" r="8"/><rect x="200" y="82" width="20" height="24" rx="3"/>
-                <circle cx="240" cy="72" r="8"/><rect x="230" y="82" width="20" height="24" rx="3"/>
-              </g>
-              <text x="30" y="168" font-family="Georgia,serif" font-size="13" fill="rgba(255,255,255,0.35)" font-style="italic">Somalia · 2022</text>
-              <text x="370" y="168" font-family="Georgia,serif" font-size="13" fill="#60a5fa" text-anchor="end" opacity="0.8">World Bank</text>
-            </svg>
-          </div>
-          <div class="article-badge">★ Trainer — 30 Public Servants</div>
-          <h3 class="article-title">World Bank Somalia Capacity Building</h3>
-          <p class="article-client">World Bank Group · 2022</p>
-          <p class="article-desc">Trained 30 Federal Government of Somalia public servants in a World Bank-financed capacity injection project, strengthening institutional governance, public financial management, and economic management skills.</p>
-          <div class="rc-tags"><span class="rc-tag">World Bank</span><span class="rc-tag">Somalia</span><span class="rc-tag">Governance</span><span class="rc-tag">Capacity Building</span></div>
-        </article>
-
-        <!-- 5 · EU Local Economic Development -->
-        <article class="article-card">
-          <div class="article-cover">
-            <svg viewBox="0 0 400 180" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
-              <defs>
-                <linearGradient id="g5a" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#003399"/><stop offset="100%" stop-color="#0050b3"/></linearGradient>
-              </defs>
-              <rect width="400" height="180" fill="url(#g5a)"/>
-              <!-- EU stars ring -->
-              <g transform="translate(200,75)">
-                <g opacity="0.7">
-                  <polygon points="0,-22 2,-7 17,-7 5,2 9,17 0,8 -9,17 -5,2 -17,-7 -2,-7" fill="#FFD700"/>
-                  <polygon points="18,-13 20,2 35,2 23,11 27,26 18,17 9,26 13,11 1,2 16,2" fill="#FFD700" transform="rotate(51.4)"/>
-                  <polygon points="18,-13 20,2 35,2 23,11 27,26 18,17 9,26 13,11 1,2 16,2" fill="#FFD700" transform="rotate(102.8)"/>
-                  <polygon points="18,-13 20,2 35,2 23,11 27,26 18,17 9,26 13,11 1,2 16,2" fill="#FFD700" transform="rotate(154.2)"/>
-                  <polygon points="18,-13 20,2 35,2 23,11 27,26 18,17 9,26 13,11 1,2 16,2" fill="#FFD700" transform="rotate(205.6)"/>
-                  <polygon points="18,-13 20,2 35,2 23,11 27,26 18,17 9,26 13,11 1,2 16,2" fill="#FFD700" transform="rotate(257)"/>
-                  <polygon points="18,-13 20,2 35,2 23,11 27,26 18,17 9,26 13,11 1,2 16,2" fill="#FFD700" transform="rotate(308.4)"/>
-                </g>
-              </g>
-              <!-- bar chart graphic -->
-              <g opacity="0.55" fill="#FFD700">
-                <rect x="60" y="120" width="18" height="30" rx="2"/>
-                <rect x="88" y="100" width="18" height="50" rx="2"/>
-                <rect x="116" y="85" width="18" height="65" rx="2"/>
-                <rect x="144" y="70" width="18" height="80" rx="2"/>
-              </g>
-              <text x="30" y="168" font-family="Georgia,serif" font-size="13" fill="rgba(255,255,255,0.35)" font-style="italic">Kenya · 2021</text>
-              <text x="370" y="168" font-family="Georgia,serif" font-size="13" fill="#FFD700" text-anchor="end" opacity="0.8">EU IDEAS</text>
-            </svg>
-          </div>
-          <div class="article-badge">★ Researcher</div>
-          <h3 class="article-title">Local Economic Development Training Curriculum</h3>
-          <p class="article-client">European Union – IDEAS Initiative · 2021</p>
-          <p class="article-desc">Developed a training curriculum for decision-makers at both national and county government levels to deepen devolution and foster local economic development across Kenya's 47 counties.</p>
-          <div class="rc-tags"><span class="rc-tag">EU</span><span class="rc-tag">Devolution</span><span class="rc-tag">LED</span><span class="rc-tag">Curriculum</span></div>
-        </article>
-
-        <!-- 6 · Yala Swamp -->
-        <article class="article-card">
-          <div class="article-cover">
-            <svg viewBox="0 0 400 180" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
-              <defs>
-                <linearGradient id="g6a" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#0a2e1a"/><stop offset="100%" stop-color="#0e4a2a"/></linearGradient>
-              </defs>
-              <rect width="400" height="180" fill="url(#g6a)"/>
-              <!-- water ripples -->
-              <g fill="none" stroke="rgba(56,189,248,0.2)" stroke-width="1.5">
-                <ellipse cx="200" cy="150" rx="180" ry="18"/>
-                <ellipse cx="200" cy="150" rx="130" ry="12"/>
-                <ellipse cx="200" cy="150" rx="80" ry="8"/>
-              </g>
-              <!-- reeds / plants -->
-              <g stroke="#4ade80" stroke-width="2" opacity="0.6" stroke-linecap="round">
-                <line x1="80" y1="160" x2="75" y2="80"/><line x1="75" y1="80" x2="68" y2="62"/>
-                <line x1="80" y1="160" x2="90" y2="90"/><line x1="90" y1="90" x2="96" y2="72"/>
-                <line x1="120" y1="160" x2="115" y2="75"/>
-                <line x1="310" y1="160" x2="315" y2="78"/>
-                <line x1="340" y1="160" x2="335" y2="85"/><line x1="335" y1="85" x2="342" y2="68"/>
-              </g>
-              <!-- sun -->
-              <circle cx="200" cy="65" r="28" fill="rgba(250,204,21,0.15)" stroke="rgba(250,204,21,0.4)" stroke-width="1.5"/>
-              <circle cx="200" cy="65" r="16" fill="rgba(250,204,21,0.3)"/>
-              <text x="30" y="168" font-family="Georgia,serif" font-size="13" fill="rgba(255,255,255,0.35)" font-style="italic">Kenya · 2015</text>
-              <text x="370" y="168" font-family="Georgia,serif" font-size="13" fill="#4ade80" text-anchor="end" opacity="0.7">KIPPRA</text>
-            </svg>
-          </div>
-          <div class="article-badge">★ Lead Developer</div>
-          <h3 class="article-title">Yala Swamp Land Use Planning Framework</h3>
-          <p class="article-client">KIPPRA / Nature Kenya · 2015</p>
-          <p class="article-desc">Developed the strategic environmental assessment scoping report and land use planning framework for the Yala Swamp — a flagship ecological conservation and sustainable land management initiative in western Kenya.</p>
-          <div class="rc-tags"><span class="rc-tag">Environment</span><span class="rc-tag">Conservation</span><span class="rc-tag">Land Use</span><span class="rc-tag">SEA</span></div>
-        </article>
-
-        <!-- 7 · COVID-19 Presidential Taskforce -->
-        <article class="article-card">
-          <div class="article-cover">
-            <svg viewBox="0 0 400 180" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
-              <defs>
-                <linearGradient id="g7a" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#1a0a2e"/><stop offset="100%" stop-color="#2a0a5e"/></linearGradient>
-              </defs>
-              <rect width="400" height="180" fill="url(#g7a)"/>
-              <!-- virus-style circles -->
-              <g opacity="0.3" fill="none" stroke="#c084fc" stroke-width="1">
-                <circle cx="200" cy="90" r="40"/>
-                <circle cx="200" cy="50" r="6"/><circle cx="240" cy="90" r="6"/><circle cx="200" cy="130" r="6"/>
-                <circle cx="160" cy="90" r="6"/><circle cx="228" cy="62" r="6"/><circle cx="228" cy="118" r="6"/>
-                <circle cx="172" cy="62" r="6"/><circle cx="172" cy="118" r="6"/>
-                <line x1="200" y1="50" x2="200" y2="50"/><line x1="200" y1="50" x2="200" y2="60"/>
-                <line x1="240" y1="90" x2="230" y2="90"/>
-                <line x1="200" y1="130" x2="200" y2="120"/>
-                <line x1="160" y1="90" x2="170" y2="90"/>
-              </g>
-              <!-- chart line -->
-              <polyline points="40,150 90,140 140,120 180,95 220,75 270,50 330,30" stroke="rgba(196,132,252,0.6)" stroke-width="2" fill="none"/>
-              <circle cx="330" cy="30" r="4" fill="#c084fc" opacity="0.8"/>
-              <text x="30" y="168" font-family="Georgia,serif" font-size="13" fill="rgba(255,255,255,0.35)" font-style="italic">Kenya · 2020</text>
-              <text x="370" y="168" font-family="Georgia,serif" font-size="13" fill="#c084fc" text-anchor="end" opacity="0.8">GoK</text>
-            </svg>
-          </div>
-          <div class="article-badge">★ Presidential Taskforce Appointee</div>
-          <h3 class="article-title">COVID-19 Presidential Taskforce</h3>
-          <p class="article-client">Government of Kenya · 2020</p>
-          <p class="article-desc">Appointed to a multi-agency team developing policy advisory that contributed to the second Presidential Executive Order of 2020, guiding national movement restrictions and the government's pandemic response framework.</p>
-          <div class="rc-tags"><span class="rc-tag">Public Health</span><span class="rc-tag">Policy</span><span class="rc-tag">GoK</span><span class="rc-tag">COVID-19</span></div>
-        </article>
-
+        <article class="article-card"><div class="article-cover"><svg viewBox="0 0 400 180"><rect width="400" height="180" fill="#041f38"/><text x="30" y="155" fill="rgba(255,255,255,0.4)">Kenya · 2024</text></svg></div><div class="article-badge">★ Lead Researcher</div><h3 class="article-title">Kenya Green Minerals Strategic Plan</h3><p class="article-client">National Mining Corporation of Kenya · 2024</p><p class="article-desc">Led development of Kenya's first strategic plan for green minerals investment — aligning with the Paris Agreement and UN SDGs.</p><div class="rc-tags"><span class="rc-tag">Green Economy</span><span class="rc-tag">Strategy</span></div></article>
+        <article class="article-card"><div class="article-cover"><svg viewBox="0 0 400 180"><rect width="400" height="180" fill="#0f2d4a"/><text x="30" y="168" fill="rgba(255,255,255,0.4)">Kenya · 2023</text></svg></div><div class="article-badge">★ Researcher & Trainer</div><h3 class="article-title">Migration and Regional Border Security</h3><p class="article-client">International Organization for Migration (IOM) · 2023</p><p class="article-desc">Conducted research on border security challenges at Kenya's ports, developed training curriculum for Kenya School of Government.</p><div class="rc-tags"><span class="rc-tag">Security</span><span class="rc-tag">Migration</span></div></article>
+        <article class="article-card"><div class="article-cover"><svg viewBox="0 0 400 180"><rect width="400" height="180" fill="#2a0a0a"/><text x="30" y="168" fill="rgba(255,255,255,0.4)">Kenya · 2019</text></svg></div><div class="article-badge">★ Researcher & Trainer</div><h3 class="article-title">Countering Violent Extremism — NIWETU</h3><p class="article-client">USAID / US Government · 2019</p><p class="article-desc">Policy-gap analysis of Kenya's security laws, training materials, and validation workshops for Kenya School of Government.</p><div class="rc-tags"><span class="rc-tag">USAID</span><span class="rc-tag">CVE</span></div></article>
+        <article class="article-card"><div class="article-cover"><svg viewBox="0 0 400 180"><rect width="400" height="180" fill="#003366"/><text x="30" y="168" fill="rgba(255,255,255,0.4)">Somalia · 2022</text></svg></div><div class="article-badge">★ Trainer — 30 Public Servants</div><h3 class="article-title">World Bank Somalia Capacity Building</h3><p class="article-client">World Bank Group · 2022</p><p class="article-desc">Trained 30 Federal Government of Somalia public servants in a World Bank-financed capacity injection project.</p><div class="rc-tags"><span class="rc-tag">World Bank</span><span class="rc-tag">Governance</span></div></article>
+        <article class="article-card"><div class="article-cover"><svg viewBox="0 0 400 180"><rect width="400" height="180" fill="#003399"/><text x="30" y="168" fill="rgba(255,255,255,0.4)">Kenya · 2021</text></svg></div><div class="article-badge">★ Researcher</div><h3 class="article-title">Local Economic Development Training Curriculum</h3><p class="article-client">European Union – IDEAS Initiative · 2021</p><p class="article-desc">Developed training curriculum for national and county governments to deepen devolution and foster local economic development.</p><div class="rc-tags"><span class="rc-tag">EU</span><span class="rc-tag">Devolution</span></div></article>
+        <article class="article-card"><div class="article-cover"><svg viewBox="0 0 400 180"><rect width="400" height="180" fill="#0a2e1a"/><text x="30" y="168" fill="rgba(255,255,255,0.4)">Kenya · 2015</text></svg></div><div class="article-badge">★ Lead Developer</div><h3 class="article-title">Yala Swamp Land Use Planning Framework</h3><p class="article-client">KIPPRA / Nature Kenya · 2015</p><p class="article-desc">Strategic environmental assessment scoping report and land use planning framework for the Yala Swamp.</p><div class="rc-tags"><span class="rc-tag">Environment</span><span class="rc-tag">Conservation</span></div></article>
+        <article class="article-card"><div class="article-cover"><svg viewBox="0 0 400 180"><rect width="400" height="180" fill="#1a0a2e"/><text x="30" y="168" fill="rgba(255,255,255,0.4)">Kenya · 2020</text></svg></div><div class="article-badge">★ Presidential Taskforce Appointee</div><h3 class="article-title">COVID-19 Presidential Taskforce</h3><p class="article-client">Government of Kenya · 2020</p><p class="article-desc">Multi-agency team developing policy advisory that contributed to the second Presidential Executive Order of 2020.</p><div class="rc-tags"><span class="rc-tag">Public Health</span><span class="rc-tag">Policy</span></div></article>
       </div>
     </div>
 
-    <!-- Strategic Contributions Tab -->
     <div class="tab-panel" id="tab-contributions">
       <div class="contrib-list">
-        <div class="contrib-item fade-up">
-          <div class="contrib-year">2024</div>
-          <div class="contrib-body">
-            <div class="contrib-client">National Mining Corporation</div>
-            <h4>Kenya's Green Minerals Strategic Plan</h4>
-            <p>Led development of Kenya's first strategic plan for green minerals development and investment, aligning mining policies with the UN SDGs and Paris Agreement.</p>
-          </div>
-        </div>
-        <div class="contrib-item fade-up">
-          <div class="contrib-year">2023</div>
-          <div class="contrib-body">
-            <div class="contrib-client">US State Department</div>
-            <h4>Project Revelio</h4>
-            <p>Supported a high-consequences evidence search programme aimed at mitigating high-level global security risks.</p>
-          </div>
-        </div>
-        <div class="contrib-item fade-up">
-          <div class="contrib-year">2022</div>
-          <div class="contrib-body">
-            <div class="contrib-client">World Bank Group</div>
-            <h4>Somalia Public Service Capacity Injection</h4>
-            <p>Trained 30 Federal Government of Somalia public servants in a World Bank-financed capacity-building project.</p>
-          </div>
-        </div>
-        <div class="contrib-item fade-up">
-          <div class="contrib-year">2020</div>
-          <div class="contrib-body">
-            <div class="contrib-client">Government of Kenya</div>
-            <h4>COVID-19 Presidential Taskforce</h4>
-            <p>Appointed to multi-agency team that developed policy advisory informing the second Presidential Executive Order of 2020, guiding national movement restrictions.</p>
-          </div>
-        </div>
-        <div class="contrib-item fade-up">
-          <div class="contrib-year">2020</div>
-          <div class="contrib-body">
-            <div class="contrib-client">State Department for Public Service</div>
-            <h4>Public Service Skills Master Plan</h4>
-            <p>Co-opted member to map scarce and high-priority skills and align public service training with the national development agenda.</p>
-          </div>
-        </div>
-        <div class="contrib-item fade-up">
-          <div class="contrib-year">2019</div>
-          <div class="contrib-body">
-            <div class="contrib-client">USAID</div>
-            <h4>Kenya National Counter-Terrorism Framework</h4>
-            <p>Conducted research on multifactor-driven violent extremism, producing policy-gap analysis that shaped Kenya's national counter-terrorism strategy.</p>
-          </div>
-        </div>
+        <div class="contrib-item fade-up"><div class="contrib-year">2024</div><div class="contrib-body"><div class="contrib-client">National Mining Corporation</div><h4>Kenya's Green Minerals Strategic Plan</h4><p>Led development of Kenya's first strategic plan for green minerals development and investment, aligning with UN SDGs and Paris Agreement.</p></div></div>
+        <div class="contrib-item fade-up"><div class="contrib-year">2023</div><div class="contrib-body"><div class="contrib-client">US State Department</div><h4>Project Revelio</h4><p>Supported a high-consequences evidence search programme aimed at mitigating high-level global security risks.</p></div></div>
+        <div class="contrib-item fade-up"><div class="contrib-year">2022</div><div class="contrib-body"><div class="contrib-client">World Bank Group</div><h4>Somalia Public Service Capacity Injection</h4><p>Trained 30 Federal Government of Somalia public servants in a World Bank-financed capacity-building project.</p></div></div>
+        <div class="contrib-item fade-up"><div class="contrib-year">2020</div><div class="contrib-body"><div class="contrib-client">Government of Kenya</div><h4>COVID-19 Presidential Taskforce</h4><p>Multi-agency team developing policy advisory informing the second Presidential Executive Order of 2020.</p></div></div>
+        <div class="contrib-item fade-up"><div class="contrib-year">2020</div><div class="contrib-body"><div class="contrib-client">State Department for Public Service</div><h4>Public Service Skills Master Plan</h4><p>Co-opted member to map scarce skills and align public service training with national development agenda.</p></div></div>
+        <div class="contrib-item fade-up"><div class="contrib-year">2019</div><div class="contrib-body"><div class="contrib-client">USAID</div><h4>Kenya National Counter-Terrorism Framework</h4><p>Policy-gap analysis shaping Kenya's national counter-terrorism strategy.</p></div></div>
       </div>
     </div>
   </div>
@@ -1421,116 +1047,16 @@
   <div class="container">
     <p class="section-label fade-up" data-i18n="pubs.label">Scholarly Work</p>
     <h2 class="section-title fade-up" data-i18n="pubs.title">Peer-Reviewed Publications</h2>
-    <p class="section-intro fade-up" data-i18n="pubs.intro">Covering the climate-economy nexus, public health, security, and sustainable development — cited by international institutions and published in peer-reviewed journals.</p>
-
+    <p class="section-intro fade-up" data-i18n="pubs.intro">Covering the climate-economy nexus, public health, security, and sustainable development — cited by international institutions.</p>
     <div class="pub-list">
-
-      <div class="pub-item fade-up">
-        <div class="pub-num">01</div>
-        <div class="pub-content">
-          <div class="pub-title">Africa's Mineral Policy Renaissance: Reflection of Geopolitical Transformations for Generational Wealth Creation in Kenya</div>
-          <div class="pub-venue">International Journal of Mining and Mineral Engineering (Inderscience)</div>
-          <div class="pub-meta">
-            <span class="pub-year-badge">2026</span>
-            <span class="rc-tag">Mining Policy</span>
-            <span class="rc-tag">Geopolitics</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="pub-item fade-up">
-        <div class="pub-num">02</div>
-        <div class="pub-content">
-          <div class="pub-title">Digital Fragility, Assorted Risks and Terrorism Confluence</div>
-          <div class="pub-venue">Africa Union Journal on Terrorism</div>
-          <div class="pub-meta">
-            <span class="pub-year-badge">2022</span>
-            <span class="pub-cite-badge">★ Honorarium</span>
-            <span class="rc-tag">Digital Security</span>
-            <span class="rc-tag">Terrorism</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="pub-item fade-up">
-        <div class="pub-num">03</div>
-        <div class="pub-content">
-          <div class="pub-title">Association of Demographic and Occupational Factors with SARS-CoV-2 Vaccine Uptake in Kenya</div>
-          <div class="pub-venue">Scientific Research Publishing Inc.</div>
-          <div class="pub-meta">
-            <span class="pub-year-badge">2021</span>
-            <span class="rc-tag">Public Health</span>
-            <span class="rc-tag">COVID-19</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="pub-item fade-up">
-        <div class="pub-num">04</div>
-        <div class="pub-content">
-          <div class="pub-title">Drought and Floods: The Triad of Climate Change Adaptation, Gender and Devolution in Kenya</div>
-          <div class="pub-venue">Gender, Politics and Governance in Africa — University of Ibadan, Nigeria</div>
-          <div class="pub-meta">
-            <span class="pub-year-badge">2020</span>
-            <span class="rc-tag">Climate Adaptation</span>
-            <span class="rc-tag">Gender</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="pub-item fade-up">
-        <div class="pub-num">05</div>
-        <div class="pub-content">
-          <div class="pub-title">Linking Climate Change, Pollinators and Cereal Yields in Kenya</div>
-          <div class="pub-venue">Cited in Springer Handbook of Climate Change Management</div>
-          <div class="pub-meta">
-            <span class="pub-year-badge">2020</span>
-            <span class="pub-cite-badge">Springer Cited</span>
-            <span class="rc-tag">Food Security</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="pub-item fade-up">
-        <div class="pub-num">06</div>
-        <div class="pub-content">
-          <div class="pub-title">Climate Change-Urbanization Nexus: Exploring the Contribution of Urbanization on Carbon Emissions in East Africa</div>
-          <div class="pub-venue">Cited by Uganda National Academy of Sciences</div>
-          <div class="pub-meta">
-            <span class="pub-year-badge">2019</span>
-            <span class="pub-cite-badge">Uganda NAS Cited</span>
-            <span class="rc-tag">Climate</span>
-            <span class="rc-tag">Urbanization</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="pub-item fade-up">
-        <div class="pub-num">07</div>
-        <div class="pub-content">
-          <div class="pub-title">Linking Weather Variability and Economic Growth in the East African Region: A Semi-Parametric Smooth Coefficient Approach</div>
-          <div class="pub-venue">Econometrics / Development Economics</div>
-          <div class="pub-meta">
-            <span class="pub-year-badge">2018</span>
-            <span class="rc-tag">East Africa</span>
-            <span class="rc-tag">Econometrics</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="pub-item fade-up">
-        <div class="pub-num">08</div>
-        <div class="pub-content">
-          <div class="pub-title">The Impact of Weather Variability on Economic Growth in Kenya</div>
-          <div class="pub-venue">Lambert Publishers (MA Thesis)</div>
-          <div class="pub-meta">
-            <span class="pub-year-badge">2016</span>
-            <span class="rc-tag">Kenya</span>
-            <span class="rc-tag">Growth Economics</span>
-          </div>
-        </div>
-      </div>
-
+      <div class="pub-item fade-up"><div class="pub-num">01</div><div class="pub-content"><div class="pub-title">Africa's Mineral Policy Renaissance: Reflection of Geopolitical Transformations for Generational Wealth Creation in Kenya</div><div class="pub-venue">International Journal of Mining and Mineral Engineering (Inderscience)</div><div class="pub-meta"><span class="pub-year-badge">2026</span><span class="rc-tag">Mining Policy</span></div></div></div>
+      <div class="pub-item fade-up"><div class="pub-num">02</div><div class="pub-content"><div class="pub-title">Digital Fragility, Assorted Risks and Terrorism Confluence</div><div class="pub-venue">Africa Union Journal on Terrorism</div><div class="pub-meta"><span class="pub-year-badge">2022</span><span class="pub-cite-badge">★ Honorarium</span></div></div></div>
+      <div class="pub-item fade-up"><div class="pub-num">03</div><div class="pub-content"><div class="pub-title">Association of Demographic and Occupational Factors with SARS-CoV-2 Vaccine Uptake in Kenya</div><div class="pub-venue">Scientific Research Publishing Inc.</div><div class="pub-meta"><span class="pub-year-badge">2021</span></div></div></div>
+      <div class="pub-item fade-up"><div class="pub-num">04</div><div class="pub-content"><div class="pub-title">Drought and Floods: The Triad of Climate Change Adaptation, Gender and Devolution in Kenya</div><div class="pub-venue">Gender, Politics and Governance in Africa — University of Ibadan, Nigeria</div><div class="pub-meta"><span class="pub-year-badge">2020</span></div></div></div>
+      <div class="pub-item fade-up"><div class="pub-num">05</div><div class="pub-content"><div class="pub-title">Linking Climate Change, Pollinators and Cereal Yields in Kenya</div><div class="pub-venue">Cited in Springer Handbook of Climate Change Management</div><div class="pub-meta"><span class="pub-year-badge">2020</span><span class="pub-cite-badge">Springer Cited</span></div></div></div>
+      <div class="pub-item fade-up"><div class="pub-num">06</div><div class="pub-content"><div class="pub-title">Climate Change-Urbanization Nexus: Exploring the Contribution of Urbanization on Carbon Emissions in East Africa</div><div class="pub-venue">Cited by Uganda National Academy of Sciences</div><div class="pub-meta"><span class="pub-year-badge">2019</span><span class="pub-cite-badge">Uganda NAS Cited</span></div></div></div>
+      <div class="pub-item fade-up"><div class="pub-num">07</div><div class="pub-content"><div class="pub-title">Linking Weather Variability and Economic Growth in the East African Region: A Semi-Parametric Smooth Coefficient Approach</div><div class="pub-venue">Econometrics / Development Economics</div><div class="pub-meta"><span class="pub-year-badge">2018</span></div></div></div>
+      <div class="pub-item fade-up"><div class="pub-num">08</div><div class="pub-content"><div class="pub-title">The Impact of Weather Variability on Economic Growth in Kenya</div><div class="pub-venue">Lambert Publishers (MA Thesis)</div><div class="pub-meta"><span class="pub-year-badge">2016</span></div></div></div>
     </div>
   </div>
 </section>
@@ -1540,59 +1066,15 @@
   <div class="container">
     <p class="section-label fade-up" data-i18n="voice.label">Op-Eds & Public Commentary</p>
     <h2 class="section-title fade-up" data-i18n="voice.title">My Public Voice</h2>
-    <p class="section-intro fade-up" data-i18n="voice.intro">Contributing to national and regional policy debates through media publications — from climate resilience to food systems, disaster preparedness, and counter-terrorism.</p>
-
+    <p class="section-intro fade-up" data-i18n="voice.intro">Contributing to national and regional policy debates through media publications.</p>
     <div class="voice-grid">
-
-      <div class="voice-card fade-up">
-        <div class="voice-outlet">Business Daily Africa</div>
-        <div class="voice-title">Long-term solutions needed to tackle drought</div>
-        <div class="voice-summary">An analysis of sustainable strategies to address recurring drought in Kenya and the East Africa region.</div>
-        <a href="https://www.businessdailyafrica.com/analysis/Long-term-solutions-needed-to-tackle-drought/539548-4145806-i93bkd/index.html" target="_blank" rel="noopener" class="voice-link">Read article →</a>
-      </div>
-
-      <div class="voice-card fade-up">
-        <div class="voice-outlet">Business Daily Africa</div>
-        <div class="voice-title">Rains have again exposed our unpreparedness</div>
-        <div class="voice-summary">Reflects on the recurring challenge of inadequate disaster preparedness during heavy rains in Kenya.</div>
-        <a href="https://www.businessdailyafrica.com/analysis/letters/Rains-have-again-exposed-our-unpreparedness/4307714-4343160-223qycz/index.html" target="_blank" rel="noopener" class="voice-link">Read article →</a>
-      </div>
-
-      <div class="voice-card fade-up">
-        <div class="voice-outlet">The Citizen (Tanzania)</div>
-        <div class="voice-title">Rains have exposed our unpreparedness, again</div>
-        <div class="voice-summary">A cross-border perspective on disaster preparedness and regional climate response across East Africa.</div>
-        <a href="https://www.thecitizen.co.tz/oped/Rains-have-exposed-our-unpreparedness--again/1840568-4345642-jhdi5fz/index.html" target="_blank" rel="noopener" class="voice-link">Read article →</a>
-      </div>
-
-      <div class="voice-card fade-up">
-        <div class="voice-outlet">Business Daily Africa</div>
-        <div class="voice-title">Protect the Mau Complex at all costs</div>
-        <div class="voice-summary">A call to defend Kenya's water tower — the Mau Forest — from further environmental degradation.</div>
-        <a href="https://www.businessdailyafrica.com/analysis/letters/4307714-4683250-jo8qu1/index.html" target="_blank" rel="noopener" class="voice-link">Read article →</a>
-      </div>
-
-      <div class="voice-card fade-up">
-        <div class="voice-outlet">Business Daily Africa</div>
-        <div class="voice-title">Speak out, tame violence against women</div>
-        <div class="voice-summary">A call to action to address and prevent gender-based violence in Kenyan society.</div>
-        <a href="https://www.businessdailyafrica.com/bd/opinion-analysis/letters/speakt-ame-violence-women-3581700" target="_blank" rel="noopener" class="voice-link">Read article →</a>
-      </div>
-
-      <div class="voice-card fade-up">
-        <div class="voice-outlet">The Star (Kenya)</div>
-        <div class="voice-title">Responsive disaster risk reduction key for development</div>
-        <div class="voice-summary">On the importance of proactive disaster risk reduction and international cooperation for sustainable development.</div>
-        <a href="https://www.the-star.co.ke/news/2021-10-13-obed-nyangena-responsive-disaster-risk-reduction-key-for-development" target="_blank" rel="noopener" class="voice-link">Read article →</a>
-      </div>
-
-      <div class="voice-card fade-up">
-        <div class="voice-outlet">Medium</div>
-        <div class="voice-title">Why cockroaches could be the next superfood, saviour of humanity</div>
-        <div class="voice-summary">An exploration of the potential for insect-based protein as a sustainable food source for the future.</div>
-        <a href="https://medium.com/@Obed254/why-cockroaches-could-be-the-next-super-food-saviour-of-humanity-73ecb93d010" target="_blank" rel="noopener" class="voice-link">Read article →</a>
-      </div>
-
+      <div class="voice-card fade-up"><div class="voice-outlet">Business Daily Africa</div><div class="voice-title">Long-term solutions needed to tackle drought</div><div class="voice-summary">Analysis of sustainable strategies to address recurring drought in Kenya.</div><a href="https://www.businessdailyafrica.com/analysis/Long-term-solutions-needed-to-tackle-drought/539548-4145806-i93bkd/index.html" target="_blank" class="voice-link">Read →</a></div>
+      <div class="voice-card fade-up"><div class="voice-outlet">Business Daily Africa</div><div class="voice-title">Rains have again exposed our unpreparedness</div><div class="voice-summary">Reflects on inadequate disaster preparedness during heavy rains.</div><a href="https://www.businessdailyafrica.com/analysis/letters/Rains-have-again-exposed-our-unpreparedness/4307714-4343160-223qycz/index.html" target="_blank" class="voice-link">Read →</a></div>
+      <div class="voice-card fade-up"><div class="voice-outlet">The Citizen (Tanzania)</div><div class="voice-title">Rains have exposed our unpreparedness, again</div><div class="voice-summary">Cross-border perspective on regional climate response.</div><a href="https://www.thecitizen.co.tz/oped/Rains-have-exposed-our-unpreparedness--again/1840568-4345642-jhdi5fz/index.html" target="_blank" class="voice-link">Read →</a></div>
+      <div class="voice-card fade-up"><div class="voice-outlet">Business Daily Africa</div><div class="voice-title">Protect the Mau Complex at all costs</div><div class="voice-summary">Call to defend Kenya's water tower from degradation.</div><a href="https://www.businessdailyafrica.com/analysis/letters/4307714-4683250-jo8qu1/index.html" target="_blank" class="voice-link">Read →</a></div>
+      <div class="voice-card fade-up"><div class="voice-outlet">Business Daily Africa</div><div class="voice-title">Speak out, tame violence against women</div><div class="voice-summary">Addressing gender-based violence in Kenyan society.</div><a href="https://www.businessdailyafrica.com/bd/opinion-analysis/letters/speakt-ame-violence-women-3581700" target="_blank" class="voice-link">Read →</a></div>
+      <div class="voice-card fade-up"><div class="voice-outlet">The Star (Kenya)</div><div class="voice-title">Responsive disaster risk reduction key for development</div><div class="voice-summary">Importance of proactive disaster risk reduction.</div><a href="https://www.the-star.co.ke/news/2021-10-13-obed-nyangena-responsive-disaster-risk-reduction-key-for-development" target="_blank" class="voice-link">Read →</a></div>
+      <div class="voice-card fade-up"><div class="voice-outlet">Medium</div><div class="voice-title">Why cockroaches could be the next superfood</div><div class="voice-summary">Insect-based protein as a sustainable food source.</div><a href="https://medium.com/@Obed254/why-cockroaches-could-be-the-next-super-food-saviour-of-humanity-73ecb93d010" target="_blank" class="voice-link">Read →</a></div>
     </div>
   </div>
 </section>
@@ -1603,330 +1085,230 @@
     <p class="section-label" style="color:rgba(232,146,26,0.85)" data-i18n="contact.label">Get In Touch</p>
     <h2 class="section-title" data-i18n="contact.title">Let's Work Together</h2>
     <p class="section-intro" data-i18n="contact.intro">Open to consulting engagements, speaking invitations, research collaborations, and media commentary. Based in Nairobi — working internationally.</p>
-
     <div class="contact-grid">
       <div class="contact-channels">
-
-        <a href="https://wa.me/254700349788" target="_blank" rel="noopener" class="channel-link">
-          <div class="channel-icon" style="background:#25D366">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-          </div>
-          <div class="channel-info">
-            <strong data-i18n="contact.whatsapp">WhatsApp</strong>
-            <small>+254 700 349 788</small>
-          </div>
-        </a>
-
-        <a href="mailto:obednyangena@outlook.com" class="channel-link">
-          <div class="channel-icon" style="background:var(--amber)">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-          </div>
-          <div class="channel-info">
-            <strong data-i18n="contact.email">Email</strong>
-            <small>obednyangena@outlook.com</small>
-          </div>
-        </a>
-
-        <a href="https://www.linkedin.com/in/obednyangena/" target="_blank" rel="noopener" class="channel-link">
-          <div class="channel-icon" style="background:#0A66C2">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
-          </div>
-          <div class="channel-info">
-            <strong>LinkedIn</strong>
-            <small>obednyangena-economist</small>
-          </div>
-        </a>
-
-        <a href="https://orcid.org/0000-0003-4205-6136" target="_blank" rel="noopener" class="channel-link">
-          <div class="channel-icon" style="background:#A6CE39">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zM9 7h1.5v10H9zm3.5 0H15c2.761 0 5 2.239 5 5s-2.239 5-5 5h-2.5V7z"/></svg>
-          </div>
-          <div class="channel-info">
-            <strong>ORCID</strong>
-            <small>0000-0003-4205-6136</small>
-          </div>
-        </a>
-
+        <a href="https://wa.me/254700349788" target="_blank" class="channel-link"><div class="channel-icon" style="background:#25D366"><svg width="22" height="22" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></div><div class="channel-info"><strong>WhatsApp</strong><small>+254 700 349 788</small></div></a>
+        <a href="mailto:obednyangena@outlook.com" class="channel-link"><div class="channel-icon" style="background:var(--amber)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></div><div class="channel-info"><strong>Email</strong><small>obednyangena@outlook.com</small></div></a>
+        <a href="https://www.linkedin.com/in/obednyangena/" target="_blank" class="channel-link"><div class="channel-icon" style="background:#0A66C2"><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></div><div class="channel-info"><strong>LinkedIn</strong><small>obednyangena-economist</small></div></a>
+        <a href="https://orcid.org/0000-0003-4205-6136" target="_blank" class="channel-link"><div class="channel-icon" style="background:#A6CE39"><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zM9 7h1.5v10H9zm3.5 0H15c2.761 0 5 2.239 5 5s-2.239 5-5 5h-2.5V7z"/></svg></div><div class="channel-info"><strong>ORCID</strong><small>0000-0003-4205-6136</small></div></a>
       </div>
-
-      <div class="contact-form-wrap">
-        <p style="color:rgba(215,236,255,0.6);font-size:0.85rem;margin-bottom:1.2rem;" data-i18n="contact.form_intro">Or send a message directly — I typically respond within 48 hours.</p>
+      <div>
+        <p style="color:rgba(215,236,255,0.6);margin-bottom:1.2rem;" data-i18n="contact.form_intro">Send a message — I typically respond within 48 hours.</p>
         <form class="contact-form" id="contactForm" action="https://formspree.io/f/xovwzykp" method="POST">
-          <div class="form-row">
-            <div class="form-group">
-              <label for="cf-name" data-i18n="contact.form_name">Your Name</label>
-              <input type="text" id="cf-name" name="name" placeholder="Jane Doe" required>
-            </div>
-            <div class="form-group">
-              <label for="cf-email" data-i18n="contact.form_email">Email Address</label>
-              <input type="email" id="cf-email" name="email" placeholder="jane@org.com" required>
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="cf-type" data-i18n="contact.form_type">Enquiry Type</label>
-            <select id="cf-type" name="subject">
-              <option value="Consulting" data-i18n="contact.type_consulting">Consulting</option>
-              <option value="Speaking" data-i18n="contact.type_speaking">Speaking / Panel</option>
-              <option value="Collaboration" data-i18n="contact.type_collab">Research Collaboration</option>
-              <option value="Media" data-i18n="contact.type_media">Media / Commentary</option>
-              <option value="Other" data-i18n="contact.type_other">Other</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="cf-msg" data-i18n="contact.form_message">Message</label>
-            <textarea id="cf-msg" name="message" placeholder="Tell me about your project or inquiry..." required></textarea>
-          </div>
+          <div class="form-row"><div class="form-group"><label data-i18n="contact.form_name">Your Name</label><input type="text" name="name" required></div><div class="form-group"><label data-i18n="contact.form_email">Email Address</label><input type="email" name="email" required></div></div>
+          <div class="form-group"><label data-i18n="contact.form_type">Enquiry Type</label><select name="subject"><option value="Consulting">Consulting</option><option value="Speaking">Speaking / Panel</option><option value="Collaboration">Research Collaboration</option><option value="Media">Media / Commentary</option><option value="Other">Other</option></select></div>
+          <div class="form-group"><label data-i18n="contact.form_message">Message</label><textarea name="message" rows="4" required></textarea></div>
           <button type="submit" class="btn btn-amber" style="width:100%;justify-content:center;" data-i18n="contact.send">Send Message</button>
-          <div class="form-success" id="formSuccess" data-i18n="contact.success">✔ Message sent! Obed will get back to you shortly.</div>
+          <div class="form-success" id="formSuccess">✔ Message sent! Obed will reply shortly.</div>
         </form>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===== FOOTER ===== -->
 <footer>
   <div class="container footer-inner">
     <div class="footer-brand">Obed <span>Nyangena</span></div>
     <p class="footer-copy">© 2025 Obed Nyangena. All rights reserved. Nairobi, Kenya.</p>
     <div class="footer-social">
-      <a href="https://wa.me/254700349788" target="_blank" rel="noopener" class="social-link" title="WhatsApp">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-      </a>
-      <a href="mailto:obednyangena@outlook.com" class="social-link" title="Email">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 01-2.06 0L2 7"/></svg>
-      </a>
-      <a href="https://www.linkedin.com/in/obednyangena/" target="_blank" rel="noopener" class="social-link" title="LinkedIn">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
-      </a>
+      <a href="https://wa.me/254700349788" target="_blank" class="social-link"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+      <a href="mailto:obednyangena@outlook.com" class="social-link"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 01-2.06 0L2 7"/></svg></a>
+      <a href="https://www.linkedin.com/in/obednyangena/" target="_blank" class="social-link"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></a>
     </div>
   </div>
 </footer>
 
-<!-- ===== SCRIPTS ===== -->
 <script>
-/* ── i18n ── */
-const LANGS = {
-  en: {
-    'nav.home':'Home','nav.about':'About','nav.toolset':'Toolset',
-    'nav.research':'Research','nav.publications':'Publications',
-    'nav.voice':'Voice','nav.contact':'Contact',
-    'hero.tag':'Available for Consulting & Collaboration',
-    'hero.sub':'Economist · Data Analyst · Policy Consultant · Visual Storyteller — 12+ years delivering evidence-based insights for governments, international development partners and mission-driven organizations across Africa.',
-    'hero.cta_contact':'Work With Me','hero.cta_cv':'Download CV',
-    'stat.years':'Years Experience','stat.pubs':'Publications','stat.citations':'Citations',
-    'about.label':'Who I Am','about.title':'Bridging Data, Policy & Real-World Impact',
-    'about.p1':"I'm Obed Nyangena — an economist and policy consultant with over 12 years of experience designing data-driven solutions across climate adaptation, food security, health, sustainable development, digitalization, and national security.",
-    'about.p2':'I currently lead Research, Strategy and Planning at the National Mining Corporation, where I spearheaded Kenya\'s first green minerals strategic plan — positioning the country as a critical minerals hub for the global energy transition.',
-    'about.p3':'My track record spans international policy advisory with the World Bank, USAID, IOM, and the EU — and I bring rigorous econometric methods together with sharp policy instincts to every engagement.',
-    'impact.years':'Years of professional experience','impact.pubs':'Peer-reviewed publications',
-    'impact.orgs':'International org. partnerships','impact.awards':'UN, AU & academic honors',
-    'toolset.label':'Technical Stack','toolset.title':'Tools I Work With',
-    'toolset.intro':'A versatile toolkit spanning statistical analysis, data visualization, econometrics, and AI-augmented research workflows.',
-    'research.label':'Research & Projects','research.title':'Selected Work',
-    'tab.projects':'Projects','tab.contributions':'Strategic Contributions',
-    'pubs.label':'Scholarly Work','pubs.title':'Peer-Reviewed Publications',
-    'pubs.intro':'Covering the climate-economy nexus, public health, security, and sustainable development — cited by international institutions and published in peer-reviewed journals.',
-    'voice.label':'Op-Eds & Public Commentary','voice.title':'My Public Voice',
-    'voice.intro':'Contributing to national and regional policy debates through media publications — from climate resilience to food systems, disaster preparedness, and counter-terrorism.',
-    'contact.label':'Get In Touch','contact.title':'Let\'s Work Together',
-    'contact.intro':'Open to consulting engagements, speaking invitations, research collaborations, and media commentary. Based in Nairobi — working internationally.',
-    'contact.whatsapp':'WhatsApp','contact.email':'Email',
-    'contact.form_intro':'Or send a message directly — I typically respond within 48 hours.',
-    'contact.form_name':'Your Name','contact.form_email':'Email Address',
-    'contact.form_type':'Enquiry Type','contact.form_message':'Message',
-    'contact.type_consulting':'Consulting','contact.type_speaking':'Speaking / Panel',
-    'contact.type_collab':'Research Collaboration','contact.type_media':'Media / Commentary',
-    'contact.type_other':'Other','contact.send':'Send Message',
-    'contact.success':'✔ Message sent! Obed will get back to you shortly.'
-  },
-  fr: {
-    'nav.home':'Accueil','nav.about':'À Propos','nav.toolset':'Outils',
-    'nav.research':'Recherche','nav.publications':'Publications',
-    'nav.voice':'Voix','nav.contact':'Contact',
-    'hero.tag':'Disponible pour Consulting & Collaboration',
-    'hero.sub':'Économiste · Analyste de Données · Consultant en Politique · Conteur Visuel — 12+ ans à produire des analyses fondées sur des preuves pour les gouvernements et les partenaires de développement international.',
-    'hero.cta_contact':'Travailler Avec Moi','hero.cta_cv':'Télécharger CV',
-    'stat.years':'Ans d\'Expérience','stat.pubs':'Publications','stat.citations':'Citations',
-    'about.label':'Qui Je Suis','about.title':'Relier Données, Politique & Impact Réel',
-    'about.p1':"Je suis Obed Nyangena — économiste et consultant en politique publique avec plus de 12 ans d'expérience dans la conception de solutions fondées sur les données.",
-    'about.p2':"Je dirige actuellement la Recherche, Stratégie et Planification à la National Mining Corporation, où j'ai piloté le premier plan stratégique du Kenya pour les minéraux verts.",
-    'about.p3':"Mon parcours couvre le conseil politique international avec la Banque mondiale, l'USAID, l'OIM et l'UE.",
-    'impact.years':"Années d'expérience professionnelle",'impact.pubs':'Publications évaluées par les pairs',
-    'impact.orgs':'Partenariats d\'organisations internationales','impact.awards':'Prix et distinctions',
-    'toolset.label':'Stack Technique','toolset.title':'Outils Que J\'Utilise',
-    'toolset.intro':'Une boîte à outils polyvalente couvrant l\'analyse statistique, la visualisation de données, l\'économétrie et les flux de travail de recherche augmentés par IA.',
-    'research.label':'Recherche & Projets','research.title':'Travaux Sélectionnés',
-    'tab.projects':'Projets','tab.contributions':'Contributions Stratégiques',
-    'pubs.label':'Travaux Académiques','pubs.title':'Publications Évaluées par les Pairs',
-    'pubs.intro':'Couvrant le nexus climat-économie, la santé publique, la sécurité et le développement durable.',
-    'voice.label':'Tribunes & Commentaires','voice.title':'Ma Voix Publique',
-    'voice.intro':'Contribuant aux débats politiques nationaux et régionaux à travers des publications médiatiques.',
-    'contact.label':'Prise de Contact','contact.title':'Travaillons Ensemble',
-    'contact.intro':'Ouvert aux missions de conseil, invitations à des conférences, collaborations de recherche. Basé à Nairobi — travaillant à l\'international.',
-    'contact.whatsapp':'WhatsApp','contact.email':'Email',
-    'contact.form_intro':'Ou envoyez un message directement — je réponds généralement sous 48 heures.',
-    'contact.form_name':'Votre Nom','contact.form_email':'Adresse Email',
-    'contact.form_type':'Type de Demande','contact.form_message':'Message',
-    'contact.type_consulting':'Conseil','contact.type_speaking':'Conférence / Panel',
-    'contact.type_collab':'Collaboration de Recherche','contact.type_media':'Médias / Commentaire',
-    'contact.type_other':'Autre','contact.send':'Envoyer le Message',
-    'contact.success':'✔ Message envoyé ! Obed vous répondra rapidement.'
-  },
-  sw: {
-    'nav.home':'Nyumbani','nav.about':'Kuhusu','nav.toolset':'Zana',
-    'nav.research':'Utafiti','nav.publications':'Machapisho',
-    'nav.voice':'Sauti','nav.contact':'Mawasiliano',
-    'hero.tag':'Ninapatikana kwa Ushauri & Ushirikiano',
-    'hero.sub':'Mchumi · Mchambuzi wa Data · Mshauri wa Sera · Msimuliaji wa Kuona — zaidi ya miaka 12 ya kutoa uchambuzi unaoongozwa na data kwa serikali na washirika wa kimataifa.',
-    'hero.cta_contact':'Fanya Kazi Nami','hero.cta_cv':'Pakua CV',
-    'stat.years':'Miaka ya Uzoefu','stat.pubs':'Machapisho','stat.citations':'Marejeo',
-    'about.label':'Mimi Ni Nani','about.title':'Kuunganisha Data, Sera & Athari Halisi',
-    'about.p1':"Mimi ni Obed Nyangena — mchumi na mshauri wa sera zenye uzoefu wa zaidi ya miaka 12 katika kubuni suluhisho zinazoongozwa na data.",
-    'about.p2':'Ninaongoza sasa Utafiti, Mkakati na Mipango katika Shirika la Madini la Taifa, ambapo niliongoza mpango wa kwanza wa mkakati wa madini ya kijani ya Kenya.',
-    'about.p3':'Historia yangu inashikilia ushauri wa sera wa kimataifa na Benki ya Dunia, USAID, IOM, na EU.',
-    'impact.years':'Miaka ya uzoefu wa kitaalamu','impact.pubs':'Machapisho yaliyopitiwa na wenzao',
-    'impact.orgs':'Ushirikiano na mashirika ya kimataifa','impact.awards':'Tuzo na heshima',
-    'toolset.label':'Vifaa vya Kiteknolojia','toolset.title':'Zana Ninazotumia',
-    'toolset.intro':'Mkoba wa zana unaoshughulikia uchambuzi wa takwimu, uonyeshaji wa data, uchumi na mtiririko wa kazi wa utafiti ulioimarishwa na AI.',
-    'research.label':'Utafiti & Miradi','research.title':'Kazi Zilizochaguliwa',
-    'tab.projects':'Miradi','tab.contributions':'Michango ya Kimkakati',
-    'pubs.label':'Kazi za Kisomi','pubs.title':'Machapisho Yaliyopitiwa',
-    'pubs.intro':'Yanayoshughulikia nexus ya hali ya hewa-uchumi, afya ya umma, usalama na maendeleo endelevu.',
-    'voice.label':'Makala & Maoni ya Umma','voice.title':'Sauti Yangu ya Umma',
-    'voice.intro':'Kuchangia mijadala ya sera ya kitaifa na kikanda kupitia machapisho ya vyombo vya habari.',
-    'contact.label':'Wasiliana Nami','contact.title':'Tufanye Kazi Pamoja',
-    'contact.intro':'Wazi kwa uhusiano wa ushauri, mialiko ya kuongea, ushirikiano wa utafiti. Niko Nairobi — kufanya kazi kimataifa.',
-    'contact.whatsapp':'WhatsApp','contact.email':'Barua Pepe',
-    'contact.form_intro':'Au tuma ujumbe moja kwa moja — mara nyingi najibu ndani ya masaa 48.',
-    'contact.form_name':'Jina Lako','contact.form_email':'Anwani ya Barua Pepe',
-    'contact.form_type':'Aina ya Maswali','contact.form_message':'Ujumbe',
-    'contact.type_consulting':'Ushauri','contact.type_speaking':'Hotuba / Jopo',
-    'contact.type_collab':'Ushirikiano wa Utafiti','contact.type_media':'Habari / Maoni',
-    'contact.type_other':'Nyingine','contact.send':'Tuma Ujumbe',
-    'contact.success':'✔ Ujumbe umetumwa! Obed atakujibu hivi karibuni.'
-  }
-};
-
-let currentLang = 'en';
-
-function setLang(lang) {
-  currentLang = lang;
-  const dict = LANGS[lang];
-  document.querySelectorAll('[data-i18n]').forEach(el => {
-    const key = el.getAttribute('data-i18n');
-    if (dict[key]) el.textContent = dict[key];
-  });
-  document.querySelectorAll('[data-i18n-html]').forEach(el => {
-    const key = el.getAttribute('data-i18n-html');
-    if (key === 'hero.headline') {
-      if (lang === 'fr') el.innerHTML = "Dans une économie façonnée par les données,<br><em>je révèle les tendances qui comptent.</em>";
-      else if (lang === 'sw') el.innerHTML = "Katika uchumi unaoundwa na data,<br><em>Ninagundua mwelekeo unaofaa.</em>";
-      else el.innerHTML = "In an economy shaped by data,<br><em>I uncover the patterns that matter.</em>";
+  // ========== FIXED TAB SWITCH (no undefined event) ==========
+  function switchTab(id) {
+    // Remove active class from all tab panels and buttons
+    document.querySelectorAll('.tab-panel').forEach(panel => panel.classList.remove('active'));
+    document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+    // Activate selected panel and button
+    const targetPanel = document.getElementById('tab-' + id);
+    if (targetPanel) targetPanel.classList.add('active');
+    // Find the button that triggered this (since we don't have event, we use a selector)
+    const activeButton = document.querySelector(`.tab-btn[onclick*="switchTab('${id}')"]`);
+    if (activeButton) activeButton.classList.add('active');
+    // If projects tab becomes active, re-run bounce-in animation
+    if (id === 'projects') {
+      const cards = document.querySelectorAll('#projectsGrid .article-card');
+      cards.forEach((card, i) => {
+        card.style.animation = 'none';
+        void card.offsetWidth;
+        setTimeout(() => {
+          card.style.animation = 'bounceIn 0.6s ease both';
+          card.classList.add('ac-visible');
+        }, i * 100);
+      });
     }
-  });
-  document.querySelectorAll('.lang-btn').forEach(b => {
-    b.classList.toggle('active', b.textContent === lang.toUpperCase());
-  });
-  document.documentElement.lang = lang === 'sw' ? 'sw' : lang;
-}
+  }
 
-/* ── Tabs ── */
-function switchTab(id) {
-  document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
-  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-  document.getElementById('tab-' + id).classList.add('active');
-  event.target.classList.add('active');
-  // Re-fire bounceIn when Projects tab is opened
-  if (id === 'projects') {
-    const cards = document.querySelectorAll('#projectsGrid .article-card');
+  // ========== LANGUAGE TRANSLATION ==========
+  const translations = {
+    en: {
+      'nav.home':'Home','nav.about':'About','nav.toolset':'Toolset','nav.research':'Research','nav.publications':'Publications','nav.voice':'Voice','nav.contact':'Contact',
+      'hero.tag':'Available for Consulting & Collaboration',
+      'hero.sub':'Economist · Data Analyst · Policy Consultant · Visual Storyteller — 12+ years delivering evidence-based insights for governments, international development partners and mission-driven organizations across Africa.',
+      'hero.cta_contact':'Work With Me',
+      'stat.years':'Years Experience','stat.pubs':'Publications','stat.citations':'Citations',
+      'about.label':'Who I Am','about.title':'Bridging Data, Policy & Real-World Impact',
+      'about.p1':"I'm Obed Nyangena — an economist and policy consultant with over 12 years of experience designing data-driven solutions across climate adaptation, food security, health, sustainable development, digitalization, and national security.",
+      'about.p2':'I currently lead Research, Strategy and Planning at the National Mining Corporation, where I spearheaded Kenya\'s first green minerals strategic plan — positioning the country as a critical minerals hub for the global energy transition, aligned with the Paris Agreement and UN SDGs.',
+      'about.p3':'My track record spans international policy advisory with the World Bank, USAID, IOM, and the EU — and I bring rigorous econometric methods together with sharp policy instincts to every engagement. When I\'m not in the data, I\'m writing op-eds and contributing to national policy conversations.',
+      'impact.years':'Years of professional experience','impact.pubs':'Peer-reviewed publications','impact.orgs':'International org. partnerships','impact.awards':'UN, AU & academic honors',
+      'toolset.label':'Technical Stack','toolset.title':'Tools I Work With','toolset.intro':'A versatile toolkit spanning statistical analysis, data visualization, econometrics, and AI-augmented research workflows.',
+      'research.label':'Research & Projects','research.title':'Selected Work','tab.projects':'Projects','tab.contributions':'Strategic Contributions',
+      'pubs.label':'Scholarly Work','pubs.title':'Peer-Reviewed Publications','pubs.intro':'Covering the climate-economy nexus, public health, security, and sustainable development — cited by international institutions.',
+      'voice.label':'Op-Eds & Public Commentary','voice.title':'My Public Voice','voice.intro':'Contributing to national and regional policy debates through media publications.',
+      'contact.label':'Get In Touch','contact.title':'Let\'s Work Together','contact.intro':'Open to consulting engagements, speaking invitations, research collaborations, and media commentary. Based in Nairobi — working internationally.',
+      'contact.whatsapp':'WhatsApp','contact.email':'Email','contact.form_intro':'Send a message — I typically respond within 48 hours.',
+      'contact.form_name':'Your Name','contact.form_email':'Email Address','contact.form_type':'Enquiry Type','contact.form_message':'Message',
+      'contact.type_consulting':'Consulting','contact.type_speaking':'Speaking / Panel','contact.type_collab':'Research Collaboration','contact.type_media':'Media / Commentary','contact.type_other':'Other',
+      'contact.send':'Send Message','contact.success':'✔ Message sent! Obed will reply shortly.'
+    },
+    fr: {
+      'nav.home':'Accueil','nav.about':'À Propos','nav.toolset':'Outils','nav.research':'Recherche','nav.publications':'Publications','nav.voice':'Voix','nav.contact':'Contact',
+      'hero.tag':'Disponible pour Consulting & Collaboration',
+      'hero.sub':'Économiste · Analyste de Données · Consultant en Politique · Conteur Visuel — 12+ ans à produire des analyses fondées sur des preuves.',
+      'hero.cta_contact':'Travailler Avec Moi',
+      'stat.years':'Ans d\'Expérience','stat.pubs':'Publications','stat.citations':'Citations',
+      'about.label':'Qui Je Suis','about.title':'Relier Données, Politique & Impact Réel',
+      'about.p1':"Je suis Obed Nyangena — économiste et consultant en politique publique avec plus de 12 ans d'expérience.",
+      'about.p2':"Je dirige actuellement la Recherche, Stratégie et Planification à la National Mining Corporation, où j'ai piloté le premier plan stratégique du Kenya pour les minéraux verts.",
+      'about.p3':"Mon parcours couvre le conseil politique international avec la Banque mondiale, l'USAID, l'OIM et l'UE.",
+      'impact.years':'Années d\'expérience','impact.pubs':'Publications évaluées','impact.orgs':'Partenariats internationaux','impact.awards':'Prix et distinctions',
+      'toolset.label':'Stack Technique','toolset.title':'Outils','toolset.intro':'Boîte à outils polyvalente.',
+      'research.label':'Recherche & Projets','research.title':'Travaux','tab.projects':'Projets','tab.contributions':'Contributions',
+      'pubs.label':'Travaux Académiques','pubs.title':'Publications','pubs.intro':'Couvrant le nexus climat-économie, santé publique, sécurité.',
+      'voice.label':'Tribunes','voice.title':'Ma Voix','voice.intro':'Contributions aux débats politiques.',
+      'contact.label':'Contact','contact.title':'Travaillons Ensemble','contact.intro':'Basé à Nairobi — travail international.',
+      'contact.form_intro':'Envoyez un message — réponse sous 48h.',
+      'contact.form_name':'Votre Nom','contact.form_email':'Email','contact.form_type':'Type','contact.form_message':'Message',
+      'contact.send':'Envoyer','contact.success':'✔ Message envoyé !'
+    },
+    sw: {
+      'nav.home':'Nyumbani','nav.about':'Kuhusu','nav.toolset':'Zana','nav.research':'Utafiti','nav.publications':'Machapisho','nav.voice':'Sauti','nav.contact':'Mawasiliano',
+      'hero.tag':'Ninapatikana kwa Ushauri',
+      'hero.sub':'Mchumi · Mchambuzi wa Data · Mshauri wa Sera — miaka 12+ ya uzoefu.',
+      'hero.cta_contact':'Fanya Kazi Nami',
+      'stat.years':'Miaka Uzoefu','stat.pubs':'Machapisho','stat.citations':'Marejeo',
+      'about.label':'Mimi Ni Nani','about.title':'Kuunganisha Data, Sera na Athari',
+      'about.p1':"Mimi ni Obed Nyangena — mchumi na mshauri wa sera na uzoefu wa zaidi ya miaka 12.",
+      'about.p2':'Ninaongoza Utafiti, Mkakati na Mipango katika Shirika la Madini la Taifa.',
+      'about.p3':'Nimeshirikiana na Benki ya Dunia, USAID, IOM na EU.',
+      'impact.years':'Miaka uzoefu','impact.pubs':'Machapisho','impact.orgs':'Ushirikiano','impact.awards':'Tuzo',
+      'toolset.label':'Vifaa','toolset.title':'Zana','toolset.intro':'Mkoba wa zana.',
+      'research.label':'Utafiti','research.title':'Kazi','tab.projects':'Miradi','tab.contributions':'Michango',
+      'pubs.label':'Kazi za Kisomi','pubs.title':'Machapisho','pubs.intro':'Kuhusu hali ya hewa, uchumi, usalama.',
+      'voice.label':'Makala','voice.title':'Sauti Yangu','voice.intro':'Kuchangia mijadala.',
+      'contact.label':'Wasiliana','contact.title':'Tufanye Kazi','contact.intro':'Nairobi — kufanya kazi kimataifa.',
+      'contact.form_intro':'Tuma ujumbe — najibu ndani ya masaa 48.',
+      'contact.form_name':'Jina Lako','contact.form_email':'Barua Pepe','contact.form_type':'Aina','contact.form_message':'Ujumbe',
+      'contact.send':'Tuma','contact.success':'✔ Ujumbe umetumwa!'
+    }
+  };
+
+  function setLang(lang) {
+    const dict = translations[lang];
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.getAttribute('data-i18n');
+      if (dict[key]) el.textContent = dict[key];
+    });
+    // Special handling for hero headline HTML
+    const heroHeadline = document.querySelector('[data-i18n-html="hero.headline"]');
+    if (heroHeadline) {
+      if (lang === 'fr') heroHeadline.innerHTML = "Dans une économie façonnée par les données,<br><em>je révèle les tendances qui comptent.</em>";
+      else if (lang === 'sw') heroHeadline.innerHTML = "Katika uchumi unaoundwa na data,<br><em>Ninagundua mwelekeo unaofaa.</em>";
+      else heroHeadline.innerHTML = "In an economy shaped by data,<br><em>I uncover the patterns that matter.</em>";
+    }
+    // Update active language button styling
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.classList.toggle('active', btn.textContent === lang.toUpperCase());
+    });
+    currentLang = lang;
+  }
+
+  // ========== MOBILE MENU ==========
+  function toggleMobile() {
+    const menu = document.getElementById('mobileMenu');
+    menu.classList.toggle('open');
+  }
+
+  // ========== SCROLL SPY ==========
+  const sections = document.querySelectorAll('section[id]');
+  window.addEventListener('scroll', () => {
+    let current = '';
+    const scrollPos = window.scrollY + 150;
+    sections.forEach(section => {
+      const top = section.offsetTop;
+      const height = section.offsetHeight;
+      if (scrollPos >= top && scrollPos < top + height) {
+        current = section.getAttribute('id');
+      }
+    });
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.classList.remove('active');
+      if (link.getAttribute('href') === `#${current}`) {
+        link.classList.add('active');
+      }
+    });
+  });
+
+  // ========== INTERSECTION OBSERVER for fade-ups and tool cards ==========
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        if (entry.target.classList.contains('tool-card')) {
+          // already handled but ensure visible
+        }
+      }
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.fade-up, .tool-card').forEach(el => observer.observe(el));
+
+  // Initial bounce-in for project cards
+  const projGrid = document.getElementById('projectsGrid');
+  if (projGrid) {
+    const cards = projGrid.querySelectorAll('.article-card');
     cards.forEach((card, i) => {
-      card.style.animation = 'none';
-      card.classList.remove('ac-visible');
-      void card.offsetWidth; // reflow
       setTimeout(() => {
         card.style.animation = 'bounceIn 0.6s ease both';
         card.classList.add('ac-visible');
       }, i * 100);
     });
   }
-}
 
-/* ── Mobile menu ── */
-function toggleMobile() {
-  document.getElementById('mobileMenu').classList.toggle('open');
-}
-
-/* ── Scroll spy ── */
-const sections = document.querySelectorAll('section[id]');
-window.addEventListener('scroll', () => {
-  let pos = window.scrollY + 120;
-  sections.forEach(s => {
-    const top = s.offsetTop, h = s.offsetHeight;
-    const link = document.querySelector(`nav a[href="#${s.id}"]`);
-    if (link) link.classList.toggle('active', pos >= top && pos < top + h);
-  });
-}, { passive: true });
-
-/* ── Intersection observer for fade-ups ── */
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(e => {
-    if (e.isIntersecting) {
-      e.target.classList.add('visible');
-      // Stagger tool cards
-      if (e.target.classList.contains('tool-card')) {
-        const cards = document.querySelectorAll('.tool-card');
-        cards.forEach((c, i) => {
-          setTimeout(() => c.classList.add('visible'), i * 60);
+  // ========== CONTACT FORM HANDLER ==========
+  const form = document.getElementById('contactForm');
+  if (form) {
+    form.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const btn = this.querySelector('button[type=submit]');
+      const originalText = btn.textContent;
+      btn.textContent = 'Sending...';
+      btn.disabled = true;
+      try {
+        const response = await fetch(this.action, {
+          method: 'POST',
+          body: new FormData(this),
+          headers: { 'Accept': 'application/json' }
         });
-        observer.unobserve(e.target);
+        if (response.ok) {
+          const successDiv = document.getElementById('formSuccess');
+          successDiv.style.display = 'block';
+          this.reset();
+          setTimeout(() => successDiv.style.display = 'none', 5000);
+        }
+      } catch (err) {
+        console.warn('Formspree error', err);
+      } finally {
+        btn.textContent = originalText;
+        btn.disabled = false;
       }
-    }
-  });
-}, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-
-document.querySelectorAll('.fade-up, .tool-card').forEach(el => observer.observe(el));
-
-/* ── BounceIn for article cards on scroll ── */
-const cardObserver = new IntersectionObserver((entries) => {
-  if (entries.some(e => e.isIntersecting)) {
-    const grid = document.getElementById('projectsGrid');
-    if (!grid) return;
-    const cards = grid.querySelectorAll('.article-card');
-    cards.forEach((card, i) => {
-      setTimeout(() => {
-        card.style.animation = `bounceIn 0.65s ease both`;
-        card.classList.add('ac-visible');
-      }, i * 110);
     });
-    cardObserver.disconnect();
   }
-}, { threshold: 0.05 });
-const projGrid = document.getElementById('projectsGrid');
-if (projGrid) cardObserver.observe(projGrid);
-
-/* ── Contact form ── */
-document.getElementById('contactForm').addEventListener('submit', async function(e) {
-  e.preventDefault();
-  const btn = this.querySelector('button[type=submit]');
-  const orig = btn.textContent;
-  btn.textContent = '…';
-  btn.disabled = true;
-  try {
-    const res = await fetch(this.action, {
-      method: 'POST', body: new FormData(this),
-      headers: { 'Accept': 'application/json' }
-    });
-    if (res.ok) {
-      const msg = document.getElementById('formSuccess');
-      msg.style.display = 'block';
-      this.reset();
-      setTimeout(() => msg.style.display = 'none', 5000);
-    }
-  } catch(_) {}
-  btn.textContent = orig;
-  btn.disabled = false;
-});
 </script>
 </body>
 </html>
